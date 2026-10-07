@@ -1,0 +1,10 @@
+Reference set,Model A,Model B,Both correct,A only correct,B only correct,Both incorrect
+Unanimous (3/3),Qwen,Llama,341,22,10,4
+Unanimous (3/3),Qwen,Mistral,350,13,7,7
+Unanimous (3/3),Llama,Mistral,339,12,18,8
+Majority (2/3),Qwen,Llama,50,6,10,17
+Majority (2/3),Qwen,Mistral,49,7,4,23
+Majority (2/3),Llama,Mistral,48,12,5,18
+Combined consensus,Qwen,Llama,391,28,20,21
+Combined consensus,Qwen,Mistral,399,20,11,30
+Combined consensus,Llama,Mistral,387,24,23,26

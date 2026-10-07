@@ -1,0 +1,4 @@
+Reference set,Reference N,Shared N,Excluded predictions,Shared coverage,Excluded review IDs
+Unanimous (3/3),378,377,1,0.9973544973544973,587
+Majority (2/3),83,83,0,1.0,
+Combined consensus,461,460,1,0.9978308026030369,587

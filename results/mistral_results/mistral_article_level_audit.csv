@@ -1,0 +1,1000 @@
+review_id,R1,R2,R3,valid_reviewers,outcome,consensus_category,mistral_prediction,included_in_evaluation,exclusion_reason,correct
+1,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Health,True,,False
+2,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+3,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+4,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+5,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+6,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,True,,True
+7,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+8,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,True,,False
+9,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Health,True,,False
+10,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+11,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+12,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+13,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+14,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+15,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+16,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+17,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+18,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+19,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,True,,True
+20,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+21,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+22,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+23,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Drug Alert,True,,False
+24,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+25,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+26,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+27,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+28,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+29,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Health,True,,False
+30,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+31,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+32,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+33,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+34,Public Health,,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+35,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+36,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+37,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Drug Alert,True,,False
+38,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Drug Alert,True,,False
+39,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+40,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+41,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+42,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+43,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+44,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+45,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+46,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+47,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Safety,True,,False
+48,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+49,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Public Safety,True,,False
+50,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+51,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+52,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+53,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+54,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+55,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+56,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+57,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+58,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+59,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+60,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,True,,False
+61,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+62,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+63,Public Health,,Public Safety,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+64,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+65,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+66,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,True,,False
+67,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+68,Public Health,,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+69,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+70,Public Health,,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+71,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+72,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+73,,Public Safety,Public Health,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+74,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+75,Public Health,Public Health,Drug Alert,3,Majority (2/3),Public Health,Drug Alert,True,,False
+76,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+77,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+78,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+79,,Public Safety,Drug Alert,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+80,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+81,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+82,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+83,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+84,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+85,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+86,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+87,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+88,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+89,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+90,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+91,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+92,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+93,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,True,,True
+94,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+95,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,True,,True
+96,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+97,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+98,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+99,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+100,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+101,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+102,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+103,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+104,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+105,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+106,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+107,,Public Health,Public Health,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+108,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+109,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+110,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Health,True,,False
+111,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+112,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+113,,Public Safety,Drug Alert,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+114,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+115,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+116,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+117,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+118,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+119,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+120,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+121,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Drug Alert,True,,False
+122,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+123,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Safety,True,,False
+124,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+125,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Safety,True,,False
+126,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+127,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+128,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+129,Public Safety,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,True,,True
+130,Public Health,Public Health,Drug Alert,3,Majority (2/3),Public Health,Drug Alert,True,,False
+131,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+132,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+133,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,True,,False
+134,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+135,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+136,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+137,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+138,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+139,Public Safety,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,True,,True
+140,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+141,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,True,,True
+142,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,True,,True
+143,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Drug Alert,True,,False
+144,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,True,,True
+145,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+146,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+147,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+148,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+149,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+150,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+151,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+152,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+153,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+154,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+155,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+156,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+157,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+158,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+159,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+160,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+161,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+162,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+163,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+164,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+165,Public Health,,,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+166,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+167,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+168,,Public Health,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+169,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+170,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+171,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+172,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+173,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+174,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+175,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+176,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+177,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+178,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,True,,True
+179,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+180,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+181,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+182,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+183,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+184,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+185,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+186,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+187,Public Safety,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+188,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+189,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+190,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+191,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+192,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+193,Public Health,,,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+194,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+195,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+196,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+197,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+198,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,True,,True
+199,Drug Alert,Drug Alert,Public Health,3,Majority (2/3),Drug Alert,Drug Alert,True,,True
+200,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+201,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+202,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+203,,Public Safety,Public Health,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+204,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+205,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+206,,Drug Alert,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+207,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+208,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+209,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+210,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+211,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+212,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+213,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+214,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+215,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+216,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+217,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+218,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+219,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Drug Alert,True,,False
+220,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+221,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+222,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,True,,True
+223,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,True,,True
+224,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+225,,Public Safety,Public Safety,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+226,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+227,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+228,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+229,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+230,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+231,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+232,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+233,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+234,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+235,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+236,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+237,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+238,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+239,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+240,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+241,Public Health,Public Health,Drug Alert,3,Majority (2/3),Public Health,Drug Alert,True,,False
+242,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+243,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Health,True,,False
+244,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+245,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+246,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+247,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+248,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+249,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Drug Alert,True,,False
+250,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+251,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+252,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+253,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+254,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Safety,True,,False
+255,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+256,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+257,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+258,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+259,Public Health,,Public Safety,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+260,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+261,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+262,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+263,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+264,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+265,Public Health,,Public Safety,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+266,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+267,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+268,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+269,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+270,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+271,,Drug Alert,Drug Alert,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+272,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+273,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+274,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+275,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+276,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+277,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+278,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Health,True,,False
+279,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+280,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+281,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+282,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+283,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+284,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+285,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+286,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+287,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+288,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+289,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+290,Public Health,Public Health,Drug Alert,3,Majority (2/3),Public Health,Drug Alert,True,,False
+291,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+292,Public Safety,Public Safety,Drug Alert,3,Majority (2/3),Public Safety,Public Safety,True,,True
+293,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+294,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+295,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+296,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+297,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+298,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+299,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+300,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+301,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+302,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+303,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+304,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+305,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+306,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+307,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+308,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+309,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+310,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,True,,False
+311,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+312,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+313,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+314,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+315,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+316,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+317,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+318,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+319,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+320,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Safety,True,,False
+321,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+322,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+323,Public Health,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+324,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+325,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+326,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+327,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+328,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+329,,Public Health,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+330,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+331,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+332,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+333,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+334,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+335,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+336,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,True,,False
+337,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+338,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+339,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+340,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+341,Public Health,,Public Health,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+342,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+343,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Health,True,,False
+344,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+345,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+346,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+347,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+348,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+349,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+350,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+351,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Safety,True,,False
+352,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+353,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+354,Public Health,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+355,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+356,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+357,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+358,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+359,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+360,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+361,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+362,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+363,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+364,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+365,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+366,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+367,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+368,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+369,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+370,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+371,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,True,,True
+372,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+373,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+374,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+375,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+376,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+377,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+378,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+379,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,True,,True
+380,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+381,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+382,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+383,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Safety,True,,False
+384,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Health,True,,False
+385,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+386,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+387,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+388,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+389,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+390,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+391,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+392,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+393,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+394,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+395,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,True,,True
+396,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+397,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+398,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+399,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+400,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+401,Public Health,,Drug Alert,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+402,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+403,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+404,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+405,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+406,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+407,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Health,True,,False
+408,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+409,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+410,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+411,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+412,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+413,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+414,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+415,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+416,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Health,True,,False
+417,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Drug Alert,True,,False
+418,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+419,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+420,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+421,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+422,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+423,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+424,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+425,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+426,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+427,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+428,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+429,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Drug Alert,True,,False
+430,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Health,True,,False
+431,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+432,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+433,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+434,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+435,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+436,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+437,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+438,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+439,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+440,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+441,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+442,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+443,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+444,Public Health,,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+445,Public Health,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+446,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Drug Alert,True,,False
+447,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+448,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+449,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+450,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+451,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+452,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Health,True,,False
+453,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+454,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+455,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+456,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+457,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+458,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+459,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+460,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,True,,True
+461,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+462,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+463,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+464,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Safety,True,,False
+465,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+466,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+467,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Safety,True,,False
+468,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+469,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+470,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+471,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+472,Public Health,,Public Safety,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+473,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+474,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+475,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+476,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+477,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+478,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+479,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Health,True,,False
+480,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+481,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+482,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+483,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+484,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+485,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+486,Public Health,,Public Safety,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+487,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+488,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+489,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+490,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+491,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+492,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+493,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+494,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+495,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+496,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+497,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+498,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+499,,Public Safety,Public Safety,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+500,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+501,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+502,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+503,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+504,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+505,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+506,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+507,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,True,,True
+508,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+509,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+510,Public Safety,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,True,,True
+511,,,N/A,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+512,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+513,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+514,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+515,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Drug Alert,True,,False
+516,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+517,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+518,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+519,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+520,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+521,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,True,,True
+522,Public Health,,N/A,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+523,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+524,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+525,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,True,,False
+526,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+527,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+528,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+529,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+530,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+531,,Public Health,Public Health,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+532,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+533,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+534,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,True,,True
+535,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+536,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+537,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+538,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+539,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+540,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+541,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+542,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+543,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+544,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+545,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+546,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+547,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+548,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,True,,True
+549,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Health,True,,False
+550,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,True,,True
+551,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+552,,Public Health,Drug Alert,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+553,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+554,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+555,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+556,,Public Health,Public Health,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+557,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,True,,True
+558,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+559,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+560,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+561,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+562,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+563,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,True,,True
+564,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,True,,True
+565,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+566,,Drug Alert,Drug Alert,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+567,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+568,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+569,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,True,,True
+570,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+571,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+572,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+573,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+574,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+575,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+576,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+577,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,True,,True
+578,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Health,True,,False
+579,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+580,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,True,,True
+581,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Safety,True,,False
+582,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+583,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+584,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+585,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Safety,True,,False
+586,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Safety,True,,False
+587,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+588,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+589,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+590,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+591,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+592,,Public Health,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+593,,Public Safety,Public Safety,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+594,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+595,,Public Safety,Public Safety,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+596,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+597,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,True,,True
+598,,Public Safety,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+599,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,True,,True
+600,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+601,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+602,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+603,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+604,Public Safety,,Public Safety,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+605,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+606,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+607,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+608,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+609,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+610,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+611,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+612,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+613,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+614,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+615,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+616,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+617,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+618,Public Health,,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+619,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+620,Public Safety,,Public Health,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+621,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+622,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+623,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+624,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+625,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+626,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+627,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+628,Public Safety,,Public Safety,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+629,Public Health,,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+630,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+631,Public Safety,,Public Health,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+632,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+633,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+634,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+635,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+636,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+637,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+638,Drug Alert,,Drug Alert,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+639,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+640,,,N/A,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+641,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+642,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+643,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+644,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+645,Public Safety,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+646,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+647,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+648,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+649,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+650,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+651,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+652,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+653,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+654,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+655,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+656,Public Health,,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+657,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+658,Public Health,,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+659,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+660,Drug Alert,,Drug Alert,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+661,Public Health,,Public Health,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+662,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+663,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+664,Public Health,,N/A,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+665,Public Safety,,Public Safety,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+666,Public Health,,Public Health,2,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+667,Public Safety,,Public Health,2,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+668,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+669,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+670,Public Safety,,Public Safety,2,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+671,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+672,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+673,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+674,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+675,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+676,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+677,,,Drug Alert,1,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+678,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+679,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+680,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+681,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+682,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+683,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+684,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+685,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+686,,,Public Safety,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+687,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+688,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+689,,,Public Health,1,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+690,,,Drug Alert,1,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+691,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+692,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+693,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+694,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+695,,,Public Health,1,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+696,,,Public Health,1,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+697,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+698,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+699,,,Public Safety,1,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+700,,,Public Health,1,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+701,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+702,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+703,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+704,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+705,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+706,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+707,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+708,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+709,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+710,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+711,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+712,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+713,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+714,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+715,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+716,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+717,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+718,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+719,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+720,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+721,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+722,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+723,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+724,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+725,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+726,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+727,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+728,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+729,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+730,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+731,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+732,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+733,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+734,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+735,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+736,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+737,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+738,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+739,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+740,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+741,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+742,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+743,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+744,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+745,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+746,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+747,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+748,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+749,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+750,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+751,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+752,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+753,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+754,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+755,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+756,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+757,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+758,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+759,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+760,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+761,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+762,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+763,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+764,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+765,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+766,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+767,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+768,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+769,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+770,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+771,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+772,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+773,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+774,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+775,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+776,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+777,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+778,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+779,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+780,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+781,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+782,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+783,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+784,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+785,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+786,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+787,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+788,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+789,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+790,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+791,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+792,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+793,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+794,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+795,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+796,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+797,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+798,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+799,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+800,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+801,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+802,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+803,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+804,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+805,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+806,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+807,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+808,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+809,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+810,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+811,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+812,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+813,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+814,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+815,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+816,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+817,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+818,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+819,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+820,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+821,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+822,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+823,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+824,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+825,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+826,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+827,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+828,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+829,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+830,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+831,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+832,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+833,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+834,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+835,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+836,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+837,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+838,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+839,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+840,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+841,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+842,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+843,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+844,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+845,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+846,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+847,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+848,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+849,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+850,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+851,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+852,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+853,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+854,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+855,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+856,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+857,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+858,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+859,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+860,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+861,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+862,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+863,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+864,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+865,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+866,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+867,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+868,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+869,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+870,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+871,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+872,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+873,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+874,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+875,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+876,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+877,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+878,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+879,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+880,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+881,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+882,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+883,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+884,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+885,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+886,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+887,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+888,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+889,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+890,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+891,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+892,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+893,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+894,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+895,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+896,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+897,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+898,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+899,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+900,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+901,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+902,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+903,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+904,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+905,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+906,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+907,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+908,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+909,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+910,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+911,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+912,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+913,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+914,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+915,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+916,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+917,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+918,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+919,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+920,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+921,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+922,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+923,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+924,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+925,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+926,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+927,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+928,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+929,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+930,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+931,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+932,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+933,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+934,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+935,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+936,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+937,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+938,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+939,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+940,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+941,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+942,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+943,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+944,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+945,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+946,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+947,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+948,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+949,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+950,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+951,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+952,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+953,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+954,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+955,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+956,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+957,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+958,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+959,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+960,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+961,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+962,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+963,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+964,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+965,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+966,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+967,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+968,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+969,,,,0,Incomplete,,Drug Alert,False,Fewer than three valid reviewer labels,
+970,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+971,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+972,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+973,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+974,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+975,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+976,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+977,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+978,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+979,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+980,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+981,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+982,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+983,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+984,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+985,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+986,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+987,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+988,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+989,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+990,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+991,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+992,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+993,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+994,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+995,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+996,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+997,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,
+998,,,,0,Incomplete,,Public Health,False,Fewer than three valid reviewer labels,
+999,,,,0,Incomplete,,Public Safety,False,Fewer than three valid reviewer labels,

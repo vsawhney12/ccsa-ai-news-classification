@@ -1,0 +1,7 @@
+Comparison,Eligible articles,Agreements,Raw agreement,Metric,Coefficient
+Reviewer 1 vs. Reviewer 2,461,398,0.8633405639913232,Cohen's kappa,0.731257518275192
+Reviewer 1 vs. Reviewer 3,590,511,0.8661016949152542,Cohen's kappa,0.7515167023851411
+Reviewer 2 vs. Reviewer 3,525,480,0.9142857142857143,Cohen's kappa,0.8379184961580681
+Three-reviewer agreement,461,,0.8799710773680405,Fleiss' kappa,0.7691992174540717
+Prevalence-robust agreement,461,,0.8799710773680405,Gwet's AC1,0.83779280991537
+Nominal reliability with missing labels,654,,,Krippendorff's alpha,0.7798040328703604

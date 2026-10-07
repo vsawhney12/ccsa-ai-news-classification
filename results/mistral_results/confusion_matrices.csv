@@ -1,0 +1,10 @@
+Reference set,Reference category,Predicted Drug Alert,Predicted Public Health,Predicted Public Safety
+Unanimous (3/3),Drug Alert,25,0,0
+Unanimous (3/3),Public Health,5,93,3
+Unanimous (3/3),Public Safety,7,5,240
+Majority (2/3),Drug Alert,9,0,1
+Majority (2/3),Public Health,8,24,9
+Majority (2/3),Public Safety,2,10,20
+Combined consensus,Drug Alert,34,0,1
+Combined consensus,Public Health,13,117,12
+Combined consensus,Public Safety,9,15,260

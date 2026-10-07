@@ -1,0 +1,1000 @@
+review_id,R1,R2,R3,valid_reviewers,outcome,consensus_category,Qwen_prediction,Llama_prediction,Mistral_prediction,included_in_comparison,exclusion_reason,Qwen_correct,Llama_correct,Mistral_correct
+1,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Health,Public Health,Public Health,True,,False,False,False
+2,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+3,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Public Health,Drug Alert,True,,True,False,True
+4,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+5,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+6,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+7,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+8,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Drug Alert,True,,True,True,False
+9,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Health,Public Health,Public Health,True,,False,False,False
+10,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+11,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+12,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+13,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+14,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+15,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+16,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+17,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+18,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+19,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+20,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+21,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+22,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+23,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Drug Alert,Public Health,Drug Alert,True,,False,True,False
+24,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+25,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+26,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+27,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+28,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+29,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Health,True,,True,True,False
+30,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+31,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+32,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+33,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+34,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+35,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+36,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,Public Safety,Public Safety,True,,False,True,True
+37,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Drug Alert,Drug Alert,Drug Alert,True,,False,False,False
+38,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Drug Alert,True,,True,True,False
+39,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+40,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+41,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+42,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+43,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+44,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+45,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+46,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+47,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Safety,Public Health,Public Safety,True,,False,True,False
+48,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+49,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Public Health,Public Safety,Public Safety,True,,False,False,False
+50,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+51,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+52,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+53,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+54,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+55,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+56,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+57,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+58,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+59,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+60,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Drug Alert,True,,True,True,False
+61,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+62,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+63,Public Health,,Public Safety,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+64,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+65,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+66,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Drug Alert,True,,True,True,False
+67,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+68,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+69,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+70,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+71,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+72,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+73,,Public Safety,Public Health,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+74,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Drug Alert,Public Safety,True,,True,False,True
+75,Public Health,Public Health,Drug Alert,3,Majority (2/3),Public Health,Drug Alert,Public Health,Drug Alert,True,,False,True,False
+76,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+77,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+78,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+79,,Public Safety,Drug Alert,2,Incomplete,,Drug Alert,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+80,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+81,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+82,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+83,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+84,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+85,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+86,,,Public Health,1,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+87,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+88,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+89,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+90,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+91,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+92,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+93,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+94,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+95,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,Public Safety,Drug Alert,True,,True,False,True
+96,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+97,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+98,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+99,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+100,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+101,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+102,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+103,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+104,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+105,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+106,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+107,,Public Health,Public Health,2,Incomplete,,Public Safety,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+108,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+109,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+110,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Health,Public Health,Public Health,True,,False,False,False
+111,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+112,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+113,,Public Safety,Drug Alert,2,Incomplete,,Public Safety,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+114,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+115,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+116,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+117,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+118,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Safety,Public Health,True,,True,False,True
+119,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+120,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+121,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Drug Alert,Drug Alert,True,,True,False,False
+122,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+123,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Safety,Public Safety,Public Safety,True,,False,False,False
+124,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+125,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Safety,Public Safety,Public Safety,True,,False,False,False
+126,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Safety,Drug Alert,Public Health,True,,False,False,True
+127,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+128,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+129,Public Safety,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+130,Public Health,Public Health,Drug Alert,3,Majority (2/3),Public Health,Drug Alert,Drug Alert,Drug Alert,True,,False,False,False
+131,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+132,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+133,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,Public Safety,Drug Alert,True,,False,True,False
+134,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+135,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+136,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+137,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+138,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+139,Public Safety,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,Public Health,Drug Alert,True,,True,False,True
+140,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+141,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+142,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+143,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Drug Alert,Public Health,Drug Alert,True,,False,True,False
+144,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+145,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+146,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+147,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+148,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+149,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+150,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Unknown,Public Safety,False,No complete three-reviewer consensus,,,
+151,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+152,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+153,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+154,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+155,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+156,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+157,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+158,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+159,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+160,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+161,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+162,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+163,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+164,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+165,Public Health,,,1,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+166,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+167,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+168,,Public Health,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+169,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Health,Public Safety,True,,True,False,True
+170,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+171,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+172,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+173,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+174,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+175,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+176,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+177,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+178,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+179,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+180,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+181,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+182,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+183,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+184,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+185,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+186,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+187,Public Safety,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+188,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+189,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+190,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+191,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+192,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+193,Public Health,,,1,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+194,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+195,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+196,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+197,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+198,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+199,Drug Alert,Drug Alert,Public Health,3,Majority (2/3),Drug Alert,Drug Alert,Public Health,Drug Alert,True,,True,False,True
+200,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+201,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+202,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+203,,Public Safety,Public Health,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+204,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+205,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+206,,Drug Alert,Public Health,2,Incomplete,,Drug Alert,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+207,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+208,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+209,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+210,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+211,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+212,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+213,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+214,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+215,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+216,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+217,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+218,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+219,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Drug Alert,Public Health,Drug Alert,True,,False,True,False
+220,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+221,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+222,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+223,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+224,Public Health,,Public Health,2,Incomplete,,Public Health,Unknown,Public Health,False,No complete three-reviewer consensus,,,
+225,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+226,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+227,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+228,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+229,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+230,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+231,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+232,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+233,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+234,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+235,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+236,Public Health,,Public Health,2,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+237,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+238,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+239,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+240,Public Health,,Public Health,2,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+241,Public Health,Public Health,Drug Alert,3,Majority (2/3),Public Health,Drug Alert,Drug Alert,Drug Alert,True,,False,False,False
+242,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,Public Safety,Public Safety,True,,False,True,True
+243,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Health,Public Health,Public Health,True,,False,False,False
+244,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+245,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+246,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+247,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+248,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+249,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Drug Alert,Public Health,Drug Alert,True,,False,True,False
+250,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+251,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+252,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+253,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+254,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Safety,Public Health,Public Safety,True,,False,True,False
+255,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Drug Alert,Public Health,True,,True,False,True
+256,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+257,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+258,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+259,Public Health,,Public Safety,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+260,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+261,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+262,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+263,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+264,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+265,Public Health,,Public Safety,2,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+266,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+267,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+268,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+269,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+270,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+271,,Drug Alert,Drug Alert,2,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+272,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+273,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+274,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+275,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+276,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,Public Safety,Public Safety,True,,False,True,True
+277,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+278,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Health,Public Health,True,,True,False,False
+279,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Drug Alert,Public Health,Public Health,True,,False,True,True
+280,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+281,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+282,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+283,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+284,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+285,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+286,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+287,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+288,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+289,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+290,Public Health,Public Health,Drug Alert,3,Majority (2/3),Public Health,Drug Alert,Drug Alert,Drug Alert,True,,False,False,False
+291,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Drug Alert,Public Safety,True,,True,False,True
+292,Public Safety,Public Safety,Drug Alert,3,Majority (2/3),Public Safety,Drug Alert,Public Safety,Public Safety,True,,False,True,True
+293,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+294,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+295,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+296,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+297,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+298,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+299,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+300,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+301,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Health,Public Safety,True,,True,False,True
+302,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+303,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+304,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+305,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+306,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+307,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+308,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+309,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+310,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Drug Alert,True,,True,True,False
+311,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+312,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+313,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+314,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+315,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+316,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Drug Alert,Public Health,Public Health,True,,False,True,True
+317,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+318,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+319,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+320,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Drug Alert,Public Safety,Public Safety,True,,False,False,False
+321,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+322,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+323,Public Health,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+324,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+325,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+326,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+327,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+328,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+329,,Public Health,Public Health,2,Incomplete,,Drug Alert,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+330,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+331,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+332,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+333,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Drug Alert,Public Health,True,,True,False,True
+334,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+335,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+336,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,Public Safety,Drug Alert,True,,False,True,False
+337,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+338,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+339,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+340,Public Health,,Public Health,2,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+341,Public Health,,Public Health,2,Incomplete,,Public Safety,Drug Alert,Public Safety,False,No complete three-reviewer consensus,,,
+342,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+343,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Health,True,,True,True,False
+344,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+345,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+346,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+347,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+348,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+349,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+350,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+351,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Safety,True,,True,True,False
+352,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+353,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+354,Public Health,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+355,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+356,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+357,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+358,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+359,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+360,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+361,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Health,Public Safety,True,,True,False,True
+362,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+363,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+364,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+365,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+366,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+367,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+368,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+369,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+370,Public Health,,Public Health,2,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+371,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+372,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+373,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+374,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+375,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+376,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+377,Public Health,,Public Health,2,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+378,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+379,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+380,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+381,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+382,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+383,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Safety,Public Safety,True,,True,False,False
+384,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Health,Public Health,Public Health,True,,False,False,False
+385,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+386,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+387,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+388,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+389,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+390,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+391,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+392,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Health,Public Safety,True,,True,False,True
+393,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+394,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+395,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+396,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+397,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+398,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+399,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+400,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+401,Public Health,,Drug Alert,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+402,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+403,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+404,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Health,Public Safety,True,,True,False,True
+405,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+406,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Drug Alert,Public Health,Public Health,True,,False,True,True
+407,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Health,Public Health,Public Health,True,,False,False,False
+408,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+409,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+410,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+411,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Safety,Public Health,True,,True,False,True
+412,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+413,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+414,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+415,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+416,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Drug Alert,Public Safety,Public Health,True,,False,True,False
+417,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Drug Alert,True,,True,True,False
+418,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+419,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+420,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+421,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+422,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+423,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+424,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+425,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+426,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+427,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+428,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+429,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Drug Alert,True,,True,True,False
+430,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Health,Public Health,True,,True,False,False
+431,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+432,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+433,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+434,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+435,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+436,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+437,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+438,Public Health,,Public Health,2,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+439,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+440,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+441,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+442,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+443,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+444,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+445,Public Health,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+446,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Drug Alert,True,,True,True,False
+447,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+448,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+449,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+450,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+451,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+452,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Health,Public Health,Public Health,True,,False,False,False
+453,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+454,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+455,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+456,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+457,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+458,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+459,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+460,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+461,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+462,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+463,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+464,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Safety,Public Safety,Public Safety,True,,False,False,False
+465,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+466,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Public Health,Drug Alert,True,,True,False,True
+467,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Safety,True,,True,True,False
+468,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+469,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+470,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+471,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+472,Public Health,,Public Safety,2,Incomplete,,Drug Alert,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+473,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+474,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+475,,Public Safety,Public Safety,2,Incomplete,,Drug Alert,Drug Alert,Public Safety,False,No complete three-reviewer consensus,,,
+476,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+477,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+478,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+479,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Health,Public Health,True,,True,False,False
+480,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+481,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+482,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Safety,Public Safety,Public Health,True,,False,False,True
+483,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+484,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+485,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+486,Public Health,,Public Safety,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+487,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+488,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+489,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+490,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Safety,Public Health,True,,True,False,True
+491,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+492,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+493,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+494,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+495,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+496,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+497,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+498,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+499,,Public Safety,Public Safety,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+500,,Public Health,Public Health,2,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+501,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+502,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+503,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+504,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+505,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Drug Alert,Public Safety,True,,True,False,True
+506,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+507,Public Health,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+508,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+509,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+510,Public Safety,Drug Alert,Drug Alert,3,Majority (2/3),Drug Alert,Drug Alert,Public Safety,Drug Alert,True,,True,False,True
+511,,,N/A,0,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+512,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+513,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+514,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+515,Public Health,Drug Alert,Public Health,3,Majority (2/3),Public Health,Drug Alert,Public Health,Drug Alert,True,,False,True,False
+516,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+517,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+518,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+519,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+520,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+521,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+522,Public Health,,N/A,1,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+523,Public Health,,Public Health,2,Incomplete,,Public Health,Unknown,Public Health,False,No complete three-reviewer consensus,,,
+524,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+525,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Drug Alert,True,,True,True,False
+526,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+527,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+528,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+529,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+530,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+531,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+532,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+533,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+534,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+535,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+536,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+537,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+538,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+539,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+540,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+541,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+542,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+543,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+544,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+545,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+546,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+547,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+548,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+549,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Health,Public Health,Public Health,True,,False,False,False
+550,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+551,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+552,,Public Health,Drug Alert,2,Incomplete,,Drug Alert,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+553,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Drug Alert,Public Safety,False,No complete three-reviewer consensus,,,
+554,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+555,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+556,,Public Health,Public Health,2,Incomplete,,Public Safety,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+557,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+558,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+559,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+560,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+561,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+562,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+563,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+564,Public Safety,Public Safety,Public Health,3,Majority (2/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+565,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+566,,Drug Alert,Drug Alert,2,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+567,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+568,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+569,Public Health,Public Safety,Public Safety,3,Majority (2/3),Public Safety,Drug Alert,Public Safety,Public Safety,True,,False,True,True
+570,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+571,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+572,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Drug Alert,Drug Alert,True,,True,True,True
+573,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+574,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+575,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+576,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+577,Drug Alert,Drug Alert,Drug Alert,3,Unanimous (3/3),Drug Alert,Drug Alert,Public Safety,Drug Alert,True,,True,False,True
+578,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Health,Public Health,True,,True,False,False
+579,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+580,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+581,Public Health,Public Safety,Public Health,3,Majority (2/3),Public Health,Public Safety,Public Safety,Public Safety,True,,False,False,False
+582,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+583,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+584,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+585,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Safety,Public Safety,True,,True,False,False
+586,Public Safety,Public Health,Public Health,3,Majority (2/3),Public Health,Public Safety,Public Safety,Public Safety,True,,False,False,False
+587,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Unknown,Public Safety,False,Non-category prediction: Llama,,,
+588,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+589,Public Health,,Public Health,2,Incomplete,,Public Health,Unknown,Public Health,False,No complete three-reviewer consensus,,,
+590,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Safety,Public Health,Public Health,True,,False,True,True
+591,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+592,,Public Health,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+593,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+594,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Safety,Public Safety,True,,True,True,True
+595,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+596,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+597,Public Safety,Public Safety,Public Safety,3,Unanimous (3/3),Public Safety,Public Safety,Public Health,Public Safety,True,,True,False,True
+598,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+599,Public Health,Public Health,Public Health,3,Unanimous (3/3),Public Health,Public Health,Public Health,Public Health,True,,True,True,True
+600,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+601,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+602,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+603,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+604,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+605,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+606,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+607,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+608,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Drug Alert,Public Safety,False,No complete three-reviewer consensus,,,
+609,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+610,,,Public Health,1,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+611,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+612,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+613,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+614,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+615,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+616,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+617,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+618,Public Health,,Public Health,2,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+619,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+620,Public Safety,,Public Health,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+621,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+622,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+623,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+624,,,Public Health,1,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+625,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+626,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+627,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+628,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+629,Public Health,,Public Health,2,Incomplete,,Drug Alert,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+630,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+631,Public Safety,,Public Health,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+632,,,Public Health,1,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+633,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+634,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+635,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+636,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+637,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+638,Drug Alert,,Drug Alert,2,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+639,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+640,,,N/A,0,Incomplete,,Public Health,Public Safety,Public Health,False,No complete three-reviewer consensus,,,
+641,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+642,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+643,,,Public Health,1,Incomplete,,Drug Alert,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+644,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+645,Public Safety,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+646,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+647,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+648,Public Health,,Public Health,2,Incomplete,,Drug Alert,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+649,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+650,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+651,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+652,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+653,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+654,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+655,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+656,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+657,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+658,Public Health,,Public Health,2,Incomplete,,Drug Alert,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+659,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+660,Drug Alert,,Drug Alert,2,Incomplete,,Drug Alert,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+661,Public Health,,Public Health,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+662,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+663,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+664,Public Health,,N/A,1,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+665,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+666,Public Health,,Public Health,2,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+667,Public Safety,,Public Health,2,Incomplete,,Public Safety,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+668,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+669,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+670,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+671,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+672,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+673,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+674,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+675,,,Public Health,1,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+676,,,Public Health,1,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+677,,,Drug Alert,1,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+678,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+679,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+680,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+681,,,Public Health,1,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+682,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+683,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+684,,,Public Health,1,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+685,,,Public Health,1,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+686,,,Public Safety,1,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+687,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+688,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+689,,,Public Health,1,Incomplete,,Drug Alert,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+690,,,Drug Alert,1,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+691,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+692,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+693,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+694,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+695,,,Public Health,1,Incomplete,,Public Health,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+696,,,Public Health,1,Incomplete,,Public Health,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+697,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+698,,,Public Safety,1,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+699,,,Public Safety,1,Incomplete,,Public Safety,Drug Alert,Public Safety,False,No complete three-reviewer consensus,,,
+700,,,Public Health,1,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+701,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+702,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+703,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+704,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+705,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+706,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+707,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+708,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+709,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+710,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+711,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+712,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+713,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+714,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+715,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+716,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+717,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+718,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+719,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+720,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+721,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+722,,,,0,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+723,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+724,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+725,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+726,,,,0,Incomplete,,Public Safety,Public Safety,Public Health,False,No complete three-reviewer consensus,,,
+727,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+728,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+729,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+730,,,,0,Incomplete,,Public Safety,Drug Alert,Public Safety,False,No complete three-reviewer consensus,,,
+731,,,,0,Incomplete,,Drug Alert,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+732,,,,0,Incomplete,,Drug Alert,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+733,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+734,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+735,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+736,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+737,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+738,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+739,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+740,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+741,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+742,,,,0,Incomplete,,Public Safety,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+743,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+744,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+745,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+746,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+747,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+748,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+749,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+750,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+751,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+752,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+753,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+754,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+755,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+756,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+757,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+758,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+759,,,,0,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+760,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+761,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+762,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+763,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+764,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+765,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+766,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+767,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+768,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+769,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+770,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+771,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+772,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+773,,,,0,Incomplete,,Public Safety,Public Safety,Public Health,False,No complete three-reviewer consensus,,,
+774,,,,0,Incomplete,,Drug Alert,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+775,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+776,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+777,,,,0,Incomplete,,Public Safety,Public Safety,Public Health,False,No complete three-reviewer consensus,,,
+778,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+779,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+780,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+781,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+782,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+783,,,,0,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+784,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+785,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+786,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+787,,,,0,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+788,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+789,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+790,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+791,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+792,,,,0,Incomplete,,Drug Alert,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+793,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+794,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+795,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+796,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+797,,,,0,Incomplete,,Public Safety,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+798,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+799,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+800,,,,0,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+801,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+802,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+803,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+804,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+805,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+806,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+807,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+808,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+809,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+810,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+811,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+812,,,,0,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+813,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+814,,,,0,Incomplete,,Public Safety,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+815,,,,0,Incomplete,,Public Safety,Drug Alert,Public Safety,False,No complete three-reviewer consensus,,,
+816,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+817,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+818,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+819,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+820,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+821,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+822,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+823,,,,0,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+824,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+825,,,,0,Incomplete,,Drug Alert,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+826,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+827,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+828,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+829,,,,0,Incomplete,,Drug Alert,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+830,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+831,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+832,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+833,,,,0,Incomplete,,Drug Alert,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+834,,,,0,Incomplete,,Public Health,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+835,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+836,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+837,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+838,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+839,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+840,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+841,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+842,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+843,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+844,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+845,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+846,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+847,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+848,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+849,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+850,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+851,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+852,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+853,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+854,,,,0,Incomplete,,Public Safety,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+855,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+856,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+857,,,,0,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+858,,,,0,Incomplete,,Unknown,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+859,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+860,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+861,,,,0,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+862,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+863,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+864,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+865,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+866,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+867,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+868,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+869,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+870,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+871,,,,0,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+872,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+873,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+874,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+875,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+876,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+877,,,,0,Incomplete,,Drug Alert,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+878,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+879,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+880,,,,0,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+881,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+882,,,,0,Incomplete,,Drug Alert,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+883,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+884,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+885,,,,0,Incomplete,,Public Safety,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+886,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+887,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+888,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+889,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+890,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+891,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+892,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+893,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+894,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+895,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+896,,,,0,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+897,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+898,,,,0,Incomplete,,Public Safety,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+899,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+900,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+901,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+902,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+903,,,,0,Incomplete,,Public Safety,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+904,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+905,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+906,,,,0,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+907,,,,0,Incomplete,,Public Health,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+908,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+909,,,,0,Incomplete,,Public Safety,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+910,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+911,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+912,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+913,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+914,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+915,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+916,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+917,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+918,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+919,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+920,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+921,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+922,,,,0,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+923,,,,0,Incomplete,,Drug Alert,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+924,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+925,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+926,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+927,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+928,,,,0,Incomplete,,Public Safety,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+929,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+930,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+931,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+932,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+933,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+934,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+935,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+936,,,,0,Incomplete,,Public Safety,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+937,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+938,,,,0,Incomplete,,Public Safety,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+939,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+940,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+941,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+942,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+943,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+944,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+945,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+946,,,,0,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+947,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+948,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+949,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+950,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+951,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+952,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+953,,,,0,Incomplete,,Public Safety,Public Safety,Drug Alert,False,No complete three-reviewer consensus,,,
+954,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+955,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+956,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+957,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+958,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+959,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+960,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+961,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+962,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+963,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+964,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+965,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+966,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+967,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+968,,,,0,Incomplete,,Drug Alert,Drug Alert,Drug Alert,False,No complete three-reviewer consensus,,,
+969,,,,0,Incomplete,,Drug Alert,Public Health,Drug Alert,False,No complete three-reviewer consensus,,,
+970,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+971,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+972,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+973,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+974,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+975,,,,0,Incomplete,,Public Safety,Drug Alert,Public Safety,False,No complete three-reviewer consensus,,,
+976,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+977,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+978,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+979,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+980,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+981,,,,0,Incomplete,,Public Health,Public Safety,Public Health,False,No complete three-reviewer consensus,,,
+982,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+983,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+984,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+985,,,,0,Incomplete,,Public Health,Public Health,Public Safety,False,No complete three-reviewer consensus,,,
+986,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+987,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+988,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+989,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+990,,,,0,Incomplete,,Public Health,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+991,,,,0,Incomplete,,Public Health,Drug Alert,Public Health,False,No complete three-reviewer consensus,,,
+992,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+993,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+994,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+995,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+996,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+997,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
+998,,,,0,Incomplete,,Public Health,Public Health,Public Health,False,No complete three-reviewer consensus,,,
+999,,,,0,Incomplete,,Public Safety,Public Safety,Public Safety,False,No complete three-reviewer consensus,,,
