@@ -1,0 +1,173 @@
+review_id,R1,R2,R3,valid_reviewers,outcome,consensus_category,expanded_consensus_category,expanded_consensus_basis,missing_reviewer,missing_reviewer_note,documented_relevance_concern,language_status
+2,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Article not relevant. About  viral vector & plasmid DNA manufacturing market size,True,Not independently verified
+12,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+13,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. About increasing access to diabetic medication for those who need it and curb off-label use,True,Not independently verified
+18,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+28,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+33,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+34,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. About an Anti-Snoring Oral Solution,True,Not independently verified
+40,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. About GLP-1 drugs for weight loss,True,Not independently verified
+51,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+55,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+59,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+68,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Overview of pharma market,True,Not independently verified
+70,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Report on generic drug market,True,Not independently verified
+89,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,Not relevant. Crash does not invoolve impaired driving,True,Not independently verified
+99,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+104,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,"Not relevant. Specific to student mental health, not substance use",True,Not independently verified
+106,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+107,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+115,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. About seniors week,True,Not independently verified
+116,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. About fossil fuels,True,Not independently verified
+120,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. About diabetes medications,True,Not independently verified
+131,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+136,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Pharma news release,True,Not independently verified
+150,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,Not relevant to substance use,True,Not independently verified
+154,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+160,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+173,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. About long COVID,True,Not independently verified
+177,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+179,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. about allergy medication,True,Not independently verified
+182,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+194,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,Not relevant. About olympians,True,Not independently verified
+202,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,Not relevant. Related to thefts,True,Not independently verified
+208,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. About medications,True,Not independently verified
+212,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+224,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Cannabinoid based medication,True,Not independently verified
+225,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+226,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Report on pharma market,True,Not independently verified
+228,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+231,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+236,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. News release on packaging market,True,Not independently verified
+240,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. About Alzheimer's medication,True,Not independently verified
+250,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Weight loss medication,True,Not independently verified
+260,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Medication for neurological disorder,True,Not independently verified
+263,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+271,,Drug Alert,Drug Alert,2,Incomplete,,Drug Alert,Two available reviewers agree (2/2),R1,,False,Not independently verified
+277,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. News release from pharma company,True,Not independently verified
+287,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. About Parkinson's,True,Not independently verified
+289,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,Not relevant. Did not find mention of substance use,True,Not independently verified
+300,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+302,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Diebetes drugs,True,Not independently verified
+308,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+309,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+311,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. psilocybin shipment for clinical trial,True,Not independently verified
+313,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. HIV. Does not seem to mention substance use,True,Not independently verified
+314,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Report on pharma marker,True,Not independently verified
+321,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. News release for dietary supplement,True,Not independently verified
+329,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+330,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+340,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Does not seem relevant. Compensation for a pharma scandal,True,Not independently verified
+341,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. News release about a cannabis company,True,Not independently verified
+342,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+344,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant? Story about an author,True,Not independently verified
+348,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+349,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+358,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+365,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. News release for packaging market,True,Not independently verified
+370,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Reports on shares for cannabis companies,True,Not independently verified
+372,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Meds for Alzheimer's disease,True,Not independently verified
+373,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+377,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. News release for cannabis company,True,Not independently verified
+381,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+387,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+398,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant? News release on a company producing MDMA for clinical trials,True,Not independently verified
+425,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+426,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. News releasue for pharma company,True,Not independently verified
+435,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. News release for cannabis company,True,Not independently verified
+437,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. News release for pharma company,True,Not independently verified
+438,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Antimicrobials,True,Not independently verified
+444,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Food safety,True,Not independently verified
+449,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+450,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+451,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,Not relevant. No actual drug charges,True,Not independently verified
+453,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+456,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+458,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,Not relevant. Police release notice,True,Not independently verified
+474,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+475,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+478,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+484,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+493,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+496,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Ozempic,True,Not independently verified
+499,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+500,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+508,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,Not relevant. Did not find mention of substance use,True,Not independently verified
+523,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant. Health care market report,True,Not independently verified
+524,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+528,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant-Packaging company,True,Not independently verified
+531,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+542,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant-pain meds,True,Not independently verified
+543,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant-AI to discover new meds,True,Not independently verified
+553,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,Not relevant-Mention of drugs is from the headline of a different article,True,Not independently verified
+556,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+565,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant-Genome mapping,True,Not independently verified
+566,,Drug Alert,Drug Alert,2,Incomplete,,Drug Alert,Two available reviewers agree (2/2),R1,,False,Not independently verified
+573,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+574,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant-Medical tech news release,True,Not independently verified
+576,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+584,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,Not relevant- No mention of substance use,True,Not independently verified
+589,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,Not relevant-Child cancer,True,Not independently verified
+591,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+592,,Public Health,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R1,,False,Not independently verified
+593,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+595,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+596,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+598,,Public Safety,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R1,,False,Not independently verified
+600,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+601,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+602,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+604,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+606,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+607,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+608,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+609,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+611,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+612,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+613,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+615,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+616,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+617,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+618,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+619,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+621,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+622,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+623,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+625,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+626,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+627,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+628,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+629,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+630,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+633,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+634,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+635,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+636,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+637,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+638,Drug Alert,,Drug Alert,2,Incomplete,,Drug Alert,Two available reviewers agree (2/2),R2,,False,Not independently verified
+639,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+641,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+642,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+644,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+647,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+648,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+649,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+650,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+651,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+652,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+653,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+654,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+655,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+656,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+657,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+658,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+659,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+660,Drug Alert,,Drug Alert,2,Incomplete,,Drug Alert,Two available reviewers agree (2/2),R2,,False,Not independently verified
+661,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+662,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+663,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+665,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+666,Public Health,,Public Health,2,Incomplete,,Public Health,Two available reviewers agree (2/2),R2,,False,Not independently verified
+668,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+669,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified
+670,Public Safety,,Public Safety,2,Incomplete,,Public Safety,Two available reviewers agree (2/2),R2,,False,Not independently verified

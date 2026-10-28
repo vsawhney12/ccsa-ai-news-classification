@@ -1,0 +1,19 @@
+Reference set,Model A,Model B,N,Both correct,A only correct,B only correct,Both incorrect,Discordant pairs,McNemar exact p-value
+Original consensus,Qwen,Llama,460,391,28,20,21,48,0.31232680747326935
+Original consensus,Qwen,Mistral,460,399,20,11,30,31,0.14961278438568115
+Original consensus,Llama,Mistral,460,387,24,23,26,47,1.0
+Expanded consensus,Qwen,Llama,628,533,40,29,26,69,0.22840022535329702
+Expanded consensus,Qwen,Mistral,628,540,33,16,39,49,0.021294114141387155
+Expanded consensus,Llama,Mistral,628,523,39,33,33,72,0.555997717760971
+Unanimous (3/3),Qwen,Llama,377,341,22,10,4,32,0.050102459732443094
+Unanimous (3/3),Qwen,Mistral,377,350,13,7,7,20,0.26317596435546875
+Unanimous (3/3),Llama,Mistral,377,339,12,18,8,30,0.36159460805356514
+Majority (2/3),Qwen,Llama,83,50,6,10,17,16,0.454498291015625
+Majority (2/3),Qwen,Mistral,83,49,7,4,23,11,0.548828125
+Majority (2/3),Llama,Mistral,83,48,12,5,18,17,0.143463134765625
+Two available reviewers agree (2/2),Qwen,Llama,168,142,12,9,5,21,0.6636238098144531
+Two available reviewers agree (2/2),Qwen,Mistral,168,141,13,5,9,18,0.09625244140625
+Two available reviewers agree (2/2),Llama,Mistral,168,136,15,10,7,25,0.42435622215270996
+Expanded excluding relevance concerns,Qwen,Llama,574,487,35,27,25,62,0.37415171240479483
+Expanded excluding relevance concerns,Qwen,Mistral,574,493,29,14,38,43,0.03153949735315109
+Expanded excluding relevance concerns,Llama,Mistral,574,479,35,28,32,63,0.44996253629022254

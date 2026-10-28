@@ -694,6 +694,299 @@ def save_results(
 
 
 # ==========================================================
+# EXPANDED EXPERT CONSENSUS
+# ==========================================================
+
+def identify_relevance_concern(note):
+    """
+    Identify explicit relevance concerns in reviewer notes.
+
+    A relevance concern is flagged but does not automatically
+    exclude an article from the expanded consensus.
+    """
+
+    import re
+
+    if note is None:
+        return False
+
+    note = str(note).lower().strip()
+
+    patterns = [
+        r"\bnot relevant\b",
+        r"\birrelevant\b",
+        r"\bnot related\b",
+        r"\bunrelated\b",
+        r"\bout of scope\b",
+        r"\bdoes not seem relevant\b",
+        r"\bnot about\b",
+    ]
+
+    return any(
+        re.search(pattern, note)
+        for pattern in patterns
+    )
+
+
+def read_reviewer_notes(path):
+    """
+    Read reviewer notes separately from the original labels.
+
+    Finds the Articles worksheet regardless of worksheet order.
+    """
+
+    workbook = load_workbook(
+        path,
+        read_only=True,
+        data_only=True,
+    )
+
+    worksheet = workbook["Articles"]
+
+    rows = worksheet.iter_rows(values_only=True)
+
+    headers = [
+        str(value).strip() if value is not None else ""
+        for value in next(rows)
+    ]
+
+    id_col = headers.index("review_id")
+    note_col = headers.index("review_notes")
+
+    notes = {}
+
+    for row in rows:
+
+        if row[id_col] is None:
+            continue
+
+        review_id = normalize_id(row[id_col])
+
+        note = (
+            row[note_col]
+            if note_col < len(row)
+            else None
+        )
+
+        notes[review_id] = (
+            str(note).strip()
+            if note is not None
+            else ""
+        )
+
+    workbook.close()
+
+    return notes
+
+
+def build_expanded_consensus(audit, reviewer_notes):
+    """
+    Expand the original three-reviewer consensus by including
+    articles where exactly two available reviewers agree.
+
+    Original groups:
+        3/3 unanimous
+        2/3 majority
+
+    Additional group:
+        2/2 agreement with third classification missing
+
+    Articles with two conflicting classifications are excluded.
+
+    Relevance concerns are flagged, not automatically excluded.
+    """
+
+    expanded_audit = []
+    expanded_reference = []
+    two_reviewer_cases = []
+
+    for row in audit:
+
+        review_id = row["review_id"]
+
+        labels = {
+            "R1": row["R1"],
+            "R2": row["R2"],
+            "R3": row["R3"],
+        }
+
+        valid = {
+            reviewer: label
+            for reviewer, label in labels.items()
+            if label in CATEGORIES
+        }
+
+        missing = [
+            reviewer
+            for reviewer in labels
+            if reviewer not in valid
+        ]
+
+        consensus = row["consensus_category"]
+        consensus_basis = row["outcome"]
+
+        missing_reviewer = ""
+        missing_note = ""
+        relevance_concern = False
+
+        # ----------------------------------------------
+        # Additional two-reviewer agreement cases
+        # ----------------------------------------------
+
+        if len(valid) == 2:
+
+            valid_categories = list(valid.values())
+
+            if valid_categories[0] == valid_categories[1]:
+
+                consensus = valid_categories[0]
+
+                consensus_basis = (
+                    "Two available reviewers agree (2/2)"
+                )
+
+            else:
+
+                consensus = ""
+
+                consensus_basis = (
+                    "Two available reviewers disagree (1/1)"
+                )
+
+        # ----------------------------------------------
+        # Missing reviewer information
+        # ----------------------------------------------
+
+        if len(missing) == 1:
+
+            missing_reviewer = missing[0]
+
+            missing_note = reviewer_notes[
+                missing_reviewer
+            ].get(review_id, "")
+
+            relevance_concern = identify_relevance_concern(
+                missing_note
+            )
+
+        # ----------------------------------------------
+        # Article-level audit
+        # ----------------------------------------------
+
+        audit_record = {
+            **row,
+            "expanded_consensus_category": consensus,
+            "expanded_consensus_basis": consensus_basis,
+            "missing_reviewer": missing_reviewer,
+            "missing_reviewer_note": missing_note,
+            "documented_relevance_concern": relevance_concern,
+            "language_status": "Not independently verified",
+        }
+
+        expanded_audit.append(audit_record)
+
+        # ----------------------------------------------
+        # Expanded reference dataset
+        # ----------------------------------------------
+
+        if consensus in CATEGORIES:
+
+            reference_record = {
+                "review_id": review_id,
+                "consensus_category": consensus,
+                "consensus_basis": consensus_basis,
+                "documented_relevance_concern":
+                    relevance_concern,
+                "language_status":
+                    "Not independently verified",
+            }
+
+            expanded_reference.append(reference_record)
+
+            if consensus_basis == (
+                "Two available reviewers agree (2/2)"
+            ):
+
+                two_reviewer_cases.append(audit_record)
+
+    return (
+        expanded_audit,
+        expanded_reference,
+        two_reviewer_cases,
+    )
+
+
+def summarize_expanded_consensus(
+    expanded_reference,
+    two_reviewer_cases,
+    expanded_audit,
+):
+    """
+    Summarize original and expanded consensus groups.
+    """
+
+    groups = {
+        "Unanimous (3/3)": [
+            row for row in expanded_reference
+            if row["consensus_basis"] == "Unanimous (3/3)"
+        ],
+
+        "Majority (2/3)": [
+            row for row in expanded_reference
+            if row["consensus_basis"] == "Majority (2/3)"
+        ],
+
+        "Two available reviewers agree (2/2)":
+            two_reviewer_cases,
+
+        "Expanded consensus":
+            expanded_reference,
+    }
+
+    summary = []
+
+    for group_name, records in groups.items():
+
+        category_field = (
+            "expanded_consensus_category"
+            if group_name == "Two available reviewers agree (2/2)"
+            else "consensus_category"
+        )
+
+        summary.append({
+            "Group": group_name,
+            "Articles": len(records),
+
+            "Public Safety": sum(
+                row[category_field] == "Public Safety"
+                for row in records
+            ),
+
+            "Public Health": sum(
+                row[category_field] == "Public Health"
+                for row in records
+            ),
+
+            "Drug Alert": sum(
+                row[category_field] == "Drug Alert"
+                for row in records
+            ),
+        })
+
+    summary.append({
+        "Group": "Additional 2/2 with relevance concerns",
+        "Articles": sum(
+            row["documented_relevance_concern"]
+            for row in two_reviewer_cases
+        ),
+        "Public Safety": "",
+        "Public Health": "",
+        "Drug Alert": "",
+    })
+
+    return summary
+
+# ==========================================================
 # MAIN
 # ==========================================================
 
@@ -751,6 +1044,111 @@ def main():
             audit,
         )
 
+# ==========================================================
+# GENERATE EXPANDED CONSENSUS
+# ==========================================================
+
+        reviewer_notes = {}
+
+        for reviewer_number, filepath in enumerate(
+            args.reviewers,
+            start=1,
+        ):
+
+            reviewer_name = f"R{reviewer_number}"
+
+            reviewer_notes[reviewer_name] = read_reviewer_notes(
+                filepath
+            )
+
+
+        (
+            expanded_audit,
+            expanded_reference,
+            two_reviewer_cases,
+        ) = build_expanded_consensus(
+            audit,
+            reviewer_notes,
+        )
+
+
+        expanded_summary = summarize_expanded_consensus(
+            expanded_reference,
+            two_reviewer_cases,
+            expanded_audit,
+        )
+
+
+        # ----------------------------------------------------------
+        # SAVE ADDITIONAL OUTPUTS
+        # ----------------------------------------------------------
+
+        write_csv(
+            args.output_dir / "expanded_article_level_audit.csv",
+            expanded_audit,
+        )
+
+        write_csv(
+            args.output_dir / "expanded_consensus_reference.csv",
+            expanded_reference,
+        )
+
+        write_csv(
+            args.output_dir / "two_reviewer_agreement_cases.csv",
+            two_reviewer_cases,
+        )
+
+        write_csv(
+            args.output_dir / "expanded_consensus_summary.csv",
+            expanded_summary,
+        )
+
+
+        # ----------------------------------------------------------
+        # VALIDATION
+        # ----------------------------------------------------------
+
+        original_count = sum(
+            row["consensus_category"] in CATEGORIES
+            for row in audit
+        )
+
+        additional_count = len(two_reviewer_cases)
+
+        expanded_count = len(expanded_reference)
+
+        relevance_count = sum(
+            row["documented_relevance_concern"]
+            for row in two_reviewer_cases
+        )
+
+
+        print("\nEXPANDED CONSENSUS ANALYSIS")
+        print("-" * 45)
+
+        print(f"Original consensus: {original_count}")
+        print(f"Additional 2/2 agreements: {additional_count}")
+        print(f"Expanded consensus: {expanded_count}")
+        print(f"Documented relevance concerns: {relevance_count}")
+
+
+        # Validate expected results against the reviewed dataset.
+
+        assert original_count == 461, (
+            f"Expected 461 original consensus articles, got {original_count}"
+        )
+
+        assert additional_count == 172, (
+            f"Expected 172 additional articles, got {additional_count}"
+        )
+
+        assert expanded_count == 633, (
+            f"Expected 633 expanded articles, got {expanded_count}"
+        )
+
+        print("\nValidation successful.")
+            
+      
         print(
             "Expert consensus analysis complete. "
             f"Results saved to {args.output_dir}"

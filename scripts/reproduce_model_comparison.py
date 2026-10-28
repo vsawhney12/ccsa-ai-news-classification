@@ -1,34 +1,47 @@
 """
-Compare Qwen, Llama, and Mistral predictions against expert consensus.
+Compare Qwen, Llama, and Mistral against expert consensus.
 
-Steps:
-1. Read labels from three expert reviewers.
-2. Build the expert consensus reference standard.
-3. Read predictions from all three models.
-4. Keep only articles with valid predictions from all three models.
-5. Calculate model metrics on the same shared sample.
-6. Compare pairwise model correctness.
-7. Save raw comparison results.
+This script evaluates:
 
-Expert consensus:
-- Only articles reviewed by all three experts are evaluated.
-- 3/3 agreement = Unanimous consensus.
-- 2/3 agreement = Majority consensus.
+1. Original consensus (3/3 and 2/3): 461 articles.
+2. Expanded consensus (3/3, 2/3, and 2/2): 633 articles.
+3. Individual expert-agreement groups.
+4. Expanded consensus excluding documented relevance concerns.
 
-Shared-sample rule:
-- An article is included only when all three models produced a valid
-  category prediction.
-- This ensures that Qwen, Llama, and Mistral are compared on exactly
-  the same articles.
+Statistical analyses:
+- Classification performance
+- Wilson 95% confidence intervals for accuracy
+- Exact McNemar tests for paired model accuracy
+- Class-specific precision, recall, and F1
+- Pairwise correctness comparisons
+- Relevance sensitivity analysis
+
+All models are evaluated on identical articles within each
+reference set. Articles with invalid predictions from any model
+are excluded from the shared comparison.
+
+Existing model-comparison results are not overwritten.
+
+Required inputs:
+- data/ArticlesV2_Blind_review_qwen.csv
+- data/ArticlesV2_Blind_review_llama.csv
+- data/ArticlesV2_Blind_review_mistral.csv
+- results/consensus_results/expanded_consensus_reference.csv
+
+Outputs:
+- results/model_comparison_expanded/
 """
 
 import argparse
 import csv
 import itertools
+import math
+
 from collections import Counter
 from pathlib import Path
 
-from openpyxl import load_workbook
+from scipy.stats import binomtest
+
 from sklearn.metrics import (
     accuracy_score,
     cohen_kappa_score,
@@ -42,8 +55,16 @@ from sklearn.metrics import (
 # ==========================================================
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
 DATA_DIR = PROJECT_ROOT / "data"
+
 RESULTS_DIR = PROJECT_ROOT / "results"
+
+CONSENSUS_DIR = RESULTS_DIR / "consensus_results"
+
+DEFAULT_OUTPUT_DIR = (
+    RESULTS_DIR / "model_comparison_expanded"
+)
 
 
 LABELS = (
@@ -52,17 +73,30 @@ LABELS = (
     "Public Safety",
 )
 
-SUBSETS = (
-    "Unanimous (3/3)",
-    "Majority (2/3)",
-    "Combined consensus",
-)
 
 MODELS = (
     "Qwen",
     "Llama",
     "Mistral",
 )
+
+
+UNANIMOUS = "Unanimous (3/3)"
+
+MAJORITY = "Majority (2/3)"
+
+TWO_REVIEWER = "Two available reviewers agree (2/2)"
+
+
+SUBSETS = (
+    "Original consensus",
+    "Expanded consensus",
+    "Unanimous (3/3)",
+    "Majority (2/3)",
+    "Two available reviewers agree (2/2)",
+    "Expanded excluding relevance concerns",
+)
+
 
 LABEL_NORMALIZATION = {
     "Public healh": "Public Health",
@@ -75,27 +109,35 @@ LABEL_NORMALIZATION = {
 # ==========================================================
 
 def normalize_label(value):
-    """Standardize known spelling/capitalization variants."""
+    """Standardize known label variants."""
 
     if value is None:
         return ""
 
     value = str(value).strip()
+
     return LABEL_NORMALIZATION.get(value, value)
 
 
 def normalize_id(value):
-    """Convert review IDs to a consistent string format."""
+    """Normalize review IDs to integer strings."""
 
     if value is None:
         raise ValueError("Missing review_id")
 
     try:
         number = float(value)
+
     except (TypeError, ValueError) as error:
+
         raise ValueError(
             f"Invalid review_id: {value!r}"
         ) from error
+
+    if not math.isfinite(number):
+        raise ValueError(
+            f"Non-finite review_id: {value!r}"
+        )
 
     if not number.is_integer():
         raise ValueError(
@@ -105,153 +147,108 @@ def normalize_id(value):
     return str(int(number))
 
 
-# ==========================================================
-# READ EXPERT LABELS
-# ==========================================================
+def normalize_boolean(value):
+    """Convert CSV boolean values into Python booleans."""
 
-def read_reviewer(path):
-    """Read review IDs and expert labels from one Excel file."""
+    if isinstance(value, bool):
+        return value
 
-    workbook = load_workbook(
-        path,
-        read_only=True,
-        data_only=True,
+    value = str(value).strip().lower()
+
+    if value in ("true", "1", "yes"):
+        return True
+
+    if value in ("false", "0", "no", ""):
+        return False
+
+    raise ValueError(
+        f"Unexpected boolean value: {value!r}"
     )
 
-    matching_sheets = []
 
-    for worksheet in workbook.worksheets:
+# ==========================================================
+# READ EXPANDED EXPERT CONSENSUS
+# ==========================================================
 
-        rows = worksheet.iter_rows(values_only=True)
+def read_consensus(path):
+    """
+    Read the expanded reference generated by
+    expert_consensus.py.
 
-        try:
-            headers = next(rows)
-        except StopIteration:
-            continue
+    Expected columns:
+    - review_id
+    - consensus_category
+    - consensus_basis
+    - documented_relevance_concern
+    """
 
-        headers = [
-            str(value).strip() if value is not None else ""
-            for value in headers
-        ]
+    records = {}
+
+    with path.open(
+        newline="",
+        encoding="utf-8-sig",
+    ) as file:
+
+        reader = csv.DictReader(file)
 
         required = {
             "review_id",
-            "reviewed_primary_category",
+            "consensus_category",
+            "consensus_basis",
+            "documented_relevance_concern",
         }
 
-        if not required <= set(headers):
-            continue
+        if (
+            reader.fieldnames is None
+            or not required <= set(reader.fieldnames)
+        ):
+            raise ValueError(
+                f"{path}: required consensus columns missing."
+            )
 
-        id_column = headers.index("review_id")
-        label_column = headers.index(
-            "reviewed_primary_category"
-        )
+        for row in reader:
 
-        records = {}
+            review_id = normalize_id(
+                row["review_id"]
+            )
 
-        for row_number, row in enumerate(rows, start=2):
+            category = normalize_label(
+                row["consensus_category"]
+            )
 
-            raw_id = row[id_column]
-            raw_label = row[label_column]
+            basis = row["consensus_basis"].strip()
 
-            if raw_id is None and all(
-                value is None for value in row
-            ):
-                continue
+            relevance = normalize_boolean(
+                row["documented_relevance_concern"]
+            )
 
-            if raw_id is None:
+            if category not in LABELS:
                 raise ValueError(
-                    f"{path}: row {row_number} has no review_id"
+                    f"Invalid consensus category for "
+                    f"ID {review_id}: {category!r}"
                 )
 
-            review_id = normalize_id(raw_id)
-            label = normalize_label(raw_label)
-
-            if label not in (*LABELS, "", "N/A"):
+            if basis not in (
+                UNANIMOUS,
+                MAJORITY,
+                TWO_REVIEWER,
+            ):
                 raise ValueError(
-                    f"{path}: unexpected category "
-                    f"{label!r}, ID {review_id}"
+                    f"Unexpected consensus basis for "
+                    f"ID {review_id}: {basis!r}"
                 )
 
             if review_id in records:
                 raise ValueError(
-                    f"{path}: duplicate review_id {review_id}"
+                    f"Duplicate consensus ID: {review_id}"
                 )
 
-            records[review_id] = label
-
-        matching_sheets.append(records)
-
-    workbook.close()
-
-    if len(matching_sheets) != 1:
-        raise ValueError(
-            f"{path}: expected exactly one worksheet "
-            "containing the required columns."
-        )
-
-    return matching_sheets[0]
-
-
-# ==========================================================
-# BUILD EXPERT CONSENSUS
-# ==========================================================
-
-def build_consensus(reviewers):
-    """Build unanimous and majority expert consensus."""
-
-    id_sets = [set(reviewer) for reviewer in reviewers]
-
-    if (
-        not id_sets[0]
-        or any(ids != id_sets[0] for ids in id_sets[1:])
-    ):
-        raise ValueError(
-            "The three reviewer files must contain "
-            "the same review IDs."
-        )
-
-    records = []
-
-    for review_id in sorted(id_sets[0], key=int):
-
-        labels = [
-            reviewer[review_id]
-            for reviewer in reviewers
-        ]
-
-        valid_labels = [
-            label for label in labels
-            if label in LABELS
-        ]
-
-        outcome = "Incomplete"
-        consensus = ""
-
-        if len(valid_labels) == 3:
-
-            counts = Counter(valid_labels)
-            consensus, votes = counts.most_common(1)[0]
-
-            if votes == 3:
-                outcome = "Unanimous (3/3)"
-
-            elif votes == 2:
-                outcome = "Majority (2/3)"
-
-            else:
-                outcome = "All three different"
-                consensus = ""
-
-        records.append({
-            "review_id": review_id,
-            "R1": labels[0],
-            "R2": labels[1],
-            "R3": labels[2],
-            "valid_reviewers": len(valid_labels),
-            "outcome": outcome,
-            "consensus_category": consensus,
-        })
+            records[review_id] = {
+                "review_id": review_id,
+                "consensus_category": category,
+                "consensus_basis": basis,
+                "documented_relevance_concern": relevance,
+            }
 
     return records
 
@@ -261,7 +258,7 @@ def build_consensus(reviewers):
 # ==========================================================
 
 def read_predictions(path):
-    """Read saved model predictions."""
+    """Read saved model classifications."""
 
     records = {}
 
@@ -282,10 +279,10 @@ def read_predictions(path):
             or not required <= set(reader.fieldnames)
         ):
             raise ValueError(
-                f"{path}: required columns are missing."
+                f"{path}: required prediction columns missing."
             )
 
-        for row_number, row in enumerate(reader, start=2):
+        for row in reader:
 
             review_id = normalize_id(
                 row["review_id"]
@@ -308,7 +305,7 @@ def read_predictions(path):
 
             if review_id in records:
                 raise ValueError(
-                    f"{path}: duplicate review_id {review_id}"
+                    f"{path}: duplicate ID {review_id}"
                 )
 
             records[review_id] = prediction
@@ -317,16 +314,126 @@ def read_predictions(path):
 
 
 # ==========================================================
-# CALCULATE METRICS
+# REFERENCE SET DEFINITIONS
 # ==========================================================
 
-def calculate_metrics(reference, predictions):
-    """Calculate classification metrics using scikit-learn."""
+def belongs_to_subset(row, subset):
+    """Determine whether an article belongs to a reference set."""
+
+    basis = row["consensus_basis"]
+
+    relevance = row["documented_relevance_concern"]
+
+    if subset == "Original consensus":
+
+        return basis in (
+            UNANIMOUS,
+            MAJORITY,
+        )
+
+    if subset == "Expanded consensus":
+
+        return basis in (
+            UNANIMOUS,
+            MAJORITY,
+            TWO_REVIEWER,
+        )
+
+    if subset == UNANIMOUS:
+
+        return basis == UNANIMOUS
+
+    if subset == MAJORITY:
+
+        return basis == MAJORITY
+
+    if subset == TWO_REVIEWER:
+
+        return basis == TWO_REVIEWER
+
+    if subset == (
+        "Expanded excluding relevance concerns"
+    ):
+
+        return (
+            basis in (
+                UNANIMOUS,
+                MAJORITY,
+                TWO_REVIEWER,
+            )
+            and not relevance
+        )
+
+    raise ValueError(
+        f"Unknown reference subset: {subset}"
+    )
+
+
+# ==========================================================
+# WILSON CONFIDENCE INTERVAL
+# ==========================================================
+
+def wilson_interval(successes, total, z=1.959963984540054):
+    """
+    Calculate a two-sided 95% Wilson score interval
+    for a binomial proportion.
+
+    Returns (lower, upper).
+    """
+
+    if total == 0:
+        return None, None
+
+    p = successes / total
+
+    z_squared = z ** 2
+
+    denominator = (
+        1 + z_squared / total
+    )
+
+    centre = (
+        p + z_squared / (2 * total)
+    )
+
+    margin = z * math.sqrt(
+        (
+            p * (1 - p)
+            + z_squared / (4 * total)
+        )
+        / total
+    )
+
+    lower = (
+        centre - margin
+    ) / denominator
+
+    upper = (
+        centre + margin
+    ) / denominator
+
+    return (
+        max(0.0, lower),
+        min(1.0, upper),
+    )
+
+
+# ==========================================================
+# CLASSIFICATION METRICS
+# ==========================================================
+
+def calculate_metrics(reference, predicted):
+    """Calculate overall classification metrics."""
+
+    if not reference:
+        raise ValueError(
+            "Cannot calculate metrics on an empty reference."
+        )
 
     macro_p, macro_r, macro_f1, _ = (
         precision_recall_fscore_support(
             reference,
-            predictions,
+            predicted,
             labels=LABELS,
             average="macro",
             zero_division=0,
@@ -336,159 +443,294 @@ def calculate_metrics(reference, predictions):
     _, _, weighted_f1, _ = (
         precision_recall_fscore_support(
             reference,
-            predictions,
+            predicted,
             labels=LABELS,
             average="weighted",
             zero_division=0,
         )
     )
 
+    correct = sum(
+        actual == prediction
+        for actual, prediction in zip(
+            reference,
+            predicted,
+        )
+    )
+
+    accuracy = accuracy_score(
+        reference,
+        predicted,
+    )
+
+    ci_lower, ci_upper = wilson_interval(
+        correct,
+        len(reference),
+    )
+
     return {
         "N": len(reference),
-        "Accuracy": accuracy_score(
-            reference,
-            predictions,
-        ),
+        "Correct": correct,
+        "Accuracy": accuracy,
+        "Accuracy 95% CI lower": ci_lower,
+        "Accuracy 95% CI upper": ci_upper,
         "Macro P": macro_p,
         "Macro R": macro_r,
         "Macro F1": macro_f1,
         "Weighted F1": weighted_f1,
         "Cohen's kappa": cohen_kappa_score(
             reference,
-            predictions,
+            predicted,
             labels=LABELS,
         ),
         "MCC": matthews_corrcoef(
             reference,
-            predictions,
+            predicted,
         ),
     }
 
 
 # ==========================================================
-# COMPARE MODELS
+# CLASS-SPECIFIC PERFORMANCE
 # ==========================================================
 
-def compare_models(consensus_records, predictions):
-    """Compare all models on one shared evaluable sample."""
+def calculate_class_metrics(
+    reference,
+    predicted,
+    subset,
+    model,
+):
+    """
+    Calculate precision, recall, F1, and support
+    for each classification category.
+    """
 
-    reviewer_ids = {
-        row["review_id"]
-        for row in consensus_records
+    precision, recall, f1, support = (
+        precision_recall_fscore_support(
+            reference,
+            predicted,
+            labels=LABELS,
+            average=None,
+            zero_division=0,
+        )
+    )
+
+    results = []
+
+    for index, category in enumerate(LABELS):
+
+        results.append({
+            "Reference set": subset,
+            "Model": model,
+            "Category": category,
+            "Support": int(support[index]),
+            "Precision": precision[index],
+            "Recall": recall[index],
+            "F1": f1[index],
+        })
+
+    return results
+
+
+# ==========================================================
+# EXACT MCNEMAR TEST
+# ==========================================================
+
+def calculate_mcnemar(
+    model_a_correct,
+    model_b_correct,
+):
+    """
+    Calculate exact McNemar's test.
+
+    Discordant pairs:
+    b = A correct, B incorrect
+    c = A incorrect, B correct
+
+    Under the null hypothesis, b and c are equally likely.
+
+    Exact two-sided p-value is obtained using a
+    binomial test with probability 0.5.
+    """
+
+    if len(model_a_correct) != len(model_b_correct):
+        raise ValueError(
+            "Paired model results must have equal lengths."
+        )
+
+    counts = Counter(
+        zip(
+            model_a_correct,
+            model_b_correct,
+        )
+    )
+
+    both_correct = counts[(True, True)]
+
+    a_only = counts[(True, False)]
+
+    b_only = counts[(False, True)]
+
+    both_incorrect = counts[(False, False)]
+
+    discordant = a_only + b_only
+
+    if discordant == 0:
+
+        p_value = 1.0
+
+    else:
+
+        p_value = binomtest(
+            min(a_only, b_only),
+            n=discordant,
+            p=0.5,
+            alternative="two-sided",
+        ).pvalue
+
+    return {
+        "Both correct": both_correct,
+        "A only correct": a_only,
+        "B only correct": b_only,
+        "Both incorrect": both_incorrect,
+        "Discordant pairs": discordant,
+        "McNemar exact p-value": p_value,
     }
 
-    for model in MODELS:
 
-        if set(predictions[model]) != reviewer_ids:
+# ==========================================================
+# BUILD ARTICLE-LEVEL AUDIT
+# ==========================================================
 
-            missing = reviewer_ids - set(predictions[model])
-            extra = set(predictions[model]) - reviewer_ids
+def build_article_audit(consensus, predictions):
+    """
+    Combine consensus and model predictions.
 
-            raise ValueError(
-                f"{model}: prediction IDs do not match reviewer IDs. "
-                f"Missing: {sorted(missing, key=int)}; "
-                f"extra: {sorted(extra, key=int)}"
-            )
-
-    # ------------------------------------------------------
-    # ARTICLE-LEVEL AUDIT
-    # ------------------------------------------------------
+    Each article retains:
+    - Reference classification
+    - Consensus agreement basis
+    - Relevance concern
+    - Model predictions
+    - Shared prediction validity
+    - Model correctness
+    """
 
     audit = []
 
-    for original in consensus_records:
+    for review_id in sorted(consensus, key=int):
 
-        row = dict(original)
+        row = dict(consensus[review_id])
+
         invalid_models = []
 
         for model in MODELS:
 
-            prediction = predictions[model][
-                row["review_id"]
-            ]
+            prediction = predictions[model].get(
+                review_id,
+                "",
+            )
 
             row[f"{model}_prediction"] = prediction
 
             if prediction not in LABELS:
                 invalid_models.append(model)
 
-        has_consensus = (
-            row["outcome"] in SUBSETS[:2]
+        shared_valid = not invalid_models
+
+        row["shared_valid_prediction"] = shared_valid
+
+        row["invalid_models"] = (
+            "; ".join(invalid_models)
         )
 
-        row["included_in_comparison"] = (
-            has_consensus and not invalid_models
+        row["included_original"] = (
+            shared_valid
+            and belongs_to_subset(
+                row,
+                "Original consensus",
+            )
         )
 
-        if not has_consensus:
-
-            row["exclusion_reason"] = (
-                "No complete three-reviewer consensus"
+        row["included_expanded"] = (
+            shared_valid
+            and belongs_to_subset(
+                row,
+                "Expanded consensus",
             )
+        )
 
-        elif invalid_models:
-
-            row["exclusion_reason"] = (
-                "Non-category prediction: "
-                + ", ".join(invalid_models)
+        row["included_relevance_sensitivity"] = (
+            shared_valid
+            and belongs_to_subset(
+                row,
+                "Expanded excluding relevance concerns",
             )
-
-        else:
-
-            row["exclusion_reason"] = ""
+        )
 
         for model in MODELS:
 
             row[f"{model}_correct"] = (
                 row[f"{model}_prediction"]
                 == row["consensus_category"]
-                if row["included_in_comparison"]
+                if shared_valid
                 else ""
             )
 
         audit.append(row)
 
-    # ------------------------------------------------------
-    # MODEL COMPARISON
-    # ------------------------------------------------------
+    return audit
+
+
+# ==========================================================
+# COMPARE MODELS
+# ==========================================================
+
+def compare_models(audit):
+    """
+    Evaluate models on identical shared samples
+    within each reference subset.
+    """
 
     model_results = []
+
+    confidence_results = []
+
     pairwise_results = []
+
+    class_results = []
+
     coverage_results = []
 
     for subset in SUBSETS:
 
-        if subset == "Combined consensus":
-
-            reference_rows = [
-                row for row in audit
-                if row["outcome"] in SUBSETS[:2]
-            ]
-
-        else:
-
-            reference_rows = [
-                row for row in audit
-                if row["outcome"] == subset
-            ]
+        reference_rows = [
+            row for row in audit
+            if belongs_to_subset(row, subset)
+        ]
 
         shared_rows = [
             row for row in reference_rows
-            if row["included_in_comparison"]
+            if row["shared_valid_prediction"]
         ]
 
         excluded_rows = [
             row for row in reference_rows
-            if not row["included_in_comparison"]
+            if not row["shared_valid_prediction"]
         ]
+
+        reference_n = len(reference_rows)
+
+        shared_n = len(shared_rows)
 
         coverage_results.append({
             "Reference set": subset,
-            "Reference N": len(reference_rows),
-            "Shared N": len(shared_rows),
+            "Reference N": reference_n,
+            "Shared N": shared_n,
             "Excluded predictions": len(excluded_rows),
             "Shared coverage": (
-                len(shared_rows) / len(reference_rows)
+                shared_n / reference_n
+                if reference_n
+                else 0
             ),
             "Excluded review IDs": "; ".join(
                 row["review_id"]
@@ -496,17 +738,21 @@ def compare_models(consensus_records, predictions):
             ),
         })
 
+        if not shared_rows:
+
+            raise ValueError(
+                f"No shared evaluable articles in {subset}."
+            )
+
         reference = [
             row["consensus_category"]
             for row in shared_rows
         ]
 
-        if not shared_rows:
-            raise ValueError(
-                f"No shared evaluable articles in {subset}."
-            )
+        # --------------------------------------------------
+        # MODEL PERFORMANCE
+        # --------------------------------------------------
 
-        # Model metrics
         for model in MODELS:
 
             predicted = [
@@ -525,36 +771,205 @@ def compare_models(consensus_records, predictions):
                 **metrics,
             })
 
-        # Pairwise correctness
+            confidence_results.append({
+                "Reference set": subset,
+                "Model": model,
+                "N": metrics["N"],
+                "Correct": metrics["Correct"],
+                "Accuracy": metrics["Accuracy"],
+                "95% CI lower": (
+                    metrics["Accuracy 95% CI lower"]
+                ),
+                "95% CI upper": (
+                    metrics["Accuracy 95% CI upper"]
+                ),
+                "CI method": "Wilson score",
+            })
+
+            class_results.extend(
+                calculate_class_metrics(
+                    reference,
+                    predicted,
+                    subset,
+                    model,
+                )
+            )
+
+        # --------------------------------------------------
+        # PAIRED MODEL COMPARISONS
+        # --------------------------------------------------
+
         for model_a, model_b in itertools.combinations(
             MODELS,
             2,
         ):
 
-            counts = Counter(
-                (
-                    row[f"{model_a}_correct"],
-                    row[f"{model_b}_correct"],
-                )
+            a_correct = [
+                row[f"{model_a}_prediction"]
+                == row["consensus_category"]
                 for row in shared_rows
+            ]
+
+            b_correct = [
+                row[f"{model_b}_prediction"]
+                == row["consensus_category"]
+                for row in shared_rows
+            ]
+
+            paired = calculate_mcnemar(
+                a_correct,
+                b_correct,
             )
 
             pairwise_results.append({
                 "Reference set": subset,
                 "Model A": model_a,
                 "Model B": model_b,
-                "Both correct": counts[(True, True)],
-                "A only correct": counts[(True, False)],
-                "B only correct": counts[(False, True)],
-                "Both incorrect": counts[(False, False)],
+                "N": shared_n,
+                **paired,
             })
 
     return (
         model_results,
+        confidence_results,
         pairwise_results,
+        class_results,
         coverage_results,
-        audit,
     )
+
+
+# ==========================================================
+# RELEVANCE SENSITIVITY SUMMARY
+# ==========================================================
+
+def build_relevance_sensitivity(model_results):
+    """
+    Compare performance when relevance-flagged
+    articles are included versus excluded.
+    """
+
+    results = []
+
+    for model in MODELS:
+
+        included = next(
+            row for row in model_results
+            if (
+                row["Reference set"] == "Expanded consensus"
+                and row["Model"] == model
+            )
+        )
+
+        excluded = next(
+            row for row in model_results
+            if (
+                row["Reference set"]
+                == "Expanded excluding relevance concerns"
+                and row["Model"] == model
+            )
+        )
+
+        results.append({
+            "Model": model,
+            "N including concerns": included["N"],
+            "Accuracy including concerns": included["Accuracy"],
+            "Macro F1 including concerns": included["Macro F1"],
+            "N excluding concerns": excluded["N"],
+            "Accuracy excluding concerns": excluded["Accuracy"],
+            "Macro F1 excluding concerns": excluded["Macro F1"],
+            "Accuracy difference": (
+                included["Accuracy"]
+                - excluded["Accuracy"]
+            ),
+            "Macro F1 difference": (
+                included["Macro F1"]
+                - excluded["Macro F1"]
+            ),
+        })
+
+    return results
+
+
+# ==========================================================
+# VALIDATION
+# ==========================================================
+
+def validate_consensus(consensus):
+    """
+    Validate expected reference-set counts.
+
+    These counts correspond to the current
+    999-article expert annotation dataset.
+    """
+
+    counts = Counter(
+        row["consensus_basis"]
+        for row in consensus.values()
+    )
+
+    expected = {
+        UNANIMOUS: 378,
+        MAJORITY: 83,
+        TWO_REVIEWER: 172,
+    }
+
+    for group, expected_count in expected.items():
+
+        actual = counts[group]
+
+        if actual != expected_count:
+
+            raise ValueError(
+                f"{group}: expected {expected_count}, "
+                f"found {actual}."
+            )
+
+    if len(consensus) != 633:
+
+        raise ValueError(
+            f"Expected 633 consensus articles, "
+            f"found {len(consensus)}."
+        )
+
+    relevance_count = sum(
+        row["documented_relevance_concern"]
+        for row in consensus.values()
+        if row["consensus_basis"] == TWO_REVIEWER
+    )
+
+    if relevance_count != 58:
+
+        raise ValueError(
+            f"Expected 58 documented relevance concerns, "
+            f"found {relevance_count}."
+        )
+
+
+def validate_predictions(consensus, predictions):
+    """
+    Ensure every consensus article has an entry
+    in each model's prediction file.
+
+    Invalid predictions are allowed but will
+    be excluded from the shared sample.
+    """
+
+    consensus_ids = set(consensus)
+
+    for model in MODELS:
+
+        missing = (
+            consensus_ids
+            - set(predictions[model])
+        )
+
+        if missing:
+
+            raise ValueError(
+                f"{model}: missing predictions for "
+                f"{len(missing)} consensus articles. "
+                f"IDs: {sorted(missing, key=int)}"
+            )
 
 
 # ==========================================================
@@ -562,7 +977,12 @@ def compare_models(consensus_records, predictions):
 # ==========================================================
 
 def write_csv(path, rows):
-    """Write a list of dictionaries to CSV."""
+    """Write records to CSV."""
+
+    if not rows:
+        raise ValueError(
+            f"No records available for {path.name}"
+        )
 
     with path.open(
         "w",
@@ -576,17 +996,21 @@ def write_csv(path, rows):
         )
 
         writer.writeheader()
+
         writer.writerows(rows)
 
 
 def save_results(
     output_dir,
     model_results,
+    confidence_results,
     pairwise_results,
-    coverage,
+    class_results,
+    coverage_results,
+    relevance_results,
     audit,
 ):
-    """Save raw model-comparison outputs."""
+    """Save expanded model-comparison outputs."""
 
     output_dir.mkdir(
         parents=True,
@@ -595,8 +1019,12 @@ def save_results(
 
     outputs = {
         "model_comparison.csv": model_results,
+        "model_confidence_intervals.csv": confidence_results,
+        "paired_model_tests.csv": pairwise_results,
         "pairwise_correctness.csv": pairwise_results,
-        "comparison_coverage.csv": coverage,
+        "class_specific_performance.csv": class_results,
+        "comparison_coverage.csv": coverage_results,
+        "relevance_sensitivity.csv": relevance_results,
         "comparison_article_level_audit.csv": audit,
     }
 
@@ -619,17 +1047,12 @@ def main():
     )
 
     parser.add_argument(
-        "--reviewers",
-        nargs=3,
+        "--consensus",
         type=Path,
-        default=[
-            DATA_DIR
-            / (
-                f"Reviewer {i} - "
-                "Articles and Labels for review.xlsx"
-            )
-            for i in range(1, 4)
-        ],
+        default=(
+            CONSENSUS_DIR
+            / "expanded_consensus_reference.csv"
+        ),
     )
 
     parser.add_argument(
@@ -662,42 +1085,133 @@ def main():
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=(
-            RESULTS_DIR
-            / "model_comparison_results"
-        ),
+        default=DEFAULT_OUTPUT_DIR,
     )
 
     args = parser.parse_args()
 
     try:
 
-        reviewers = [
-            read_reviewer(path)
-            for path in args.reviewers
-        ]
+        # --------------------------------------------------
+        # READ REFERENCE DATA
+        # --------------------------------------------------
 
-        consensus = build_consensus(reviewers)
+        consensus = read_consensus(
+            args.consensus
+        )
+
+        validate_consensus(
+            consensus
+        )
+
+        # --------------------------------------------------
+        # READ MODEL PREDICTIONS
+        # --------------------------------------------------
 
         predictions = {
-            "Qwen": read_predictions(args.qwen),
-            "Llama": read_predictions(args.llama),
-            "Mistral": read_predictions(args.mistral),
+            "Qwen": read_predictions(
+                args.qwen
+            ),
+            "Llama": read_predictions(
+                args.llama
+            ),
+            "Mistral": read_predictions(
+                args.mistral
+            ),
         }
 
-        results = compare_models(
+        validate_predictions(
             consensus,
             predictions,
         )
 
-        save_results(
-            args.output_dir,
-            *results,
+        # --------------------------------------------------
+        # BUILD ARTICLE AUDIT
+        # --------------------------------------------------
+
+        audit = build_article_audit(
+            consensus,
+            predictions,
         )
 
+        # --------------------------------------------------
+        # COMPARE MODELS
+        # --------------------------------------------------
+
+        (
+            model_results,
+            confidence_results,
+            pairwise_results,
+            class_results,
+            coverage_results,
+        ) = compare_models(
+            audit
+        )
+
+        # --------------------------------------------------
+        # RELEVANCE SENSITIVITY
+        # --------------------------------------------------
+
+        relevance_results = (
+            build_relevance_sensitivity(
+                model_results
+            )
+        )
+
+        # --------------------------------------------------
+        # SAVE RESULTS
+        # --------------------------------------------------
+
+        save_results(
+            args.output_dir,
+            model_results,
+            confidence_results,
+            pairwise_results,
+            class_results,
+            coverage_results,
+            relevance_results,
+            audit,
+        )
+
+        # --------------------------------------------------
+        # PRINT SUMMARY
+        # --------------------------------------------------
+
+        print("\nMODEL COMPARISON COMPLETE")
+        print("-" * 50)
+
         print(
-            f"Comparison complete. "
-            f"Results saved to {args.output_dir}"
+            f"Consensus articles: {len(consensus)}"
+        )
+
+        for row in coverage_results:
+
+            print(
+                f"{row['Reference set']}: "
+                f"{row['Shared N']} / "
+                f"{row['Reference N']} evaluable"
+            )
+
+        print("\nMODEL ACCURACY")
+
+        for row in model_results:
+
+            if row["Reference set"] in (
+                "Original consensus",
+                "Expanded consensus",
+            ):
+
+                print(
+                    f"{row['Reference set']} | "
+                    f"{row['Model']}: "
+                    f"{row['Accuracy']:.3f} "
+                    f"(95% CI "
+                    f"{row['Accuracy 95% CI lower']:.3f}-"
+                    f"{row['Accuracy 95% CI upper']:.3f})"
+                )
+
+        print(
+            f"\nResults saved to: {args.output_dir}"
         )
 
     except (
