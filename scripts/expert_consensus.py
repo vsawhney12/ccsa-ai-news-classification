@@ -701,8 +701,8 @@ def identify_relevance_concern(note):
     """
     Identify explicit relevance concerns in reviewer notes.
 
-    A relevance concern is flagged but does not automatically
-    exclude an article from the expanded consensus.
+    Documented relevance concerns are used to exclude flagged
+    two-reviewer agreement cases from the expanded reference.
     """
 
     import re
@@ -793,7 +793,8 @@ def build_expanded_consensus(audit, reviewer_notes):
 
     Articles with two conflicting classifications are excluded.
 
-    Relevance concerns are flagged, not automatically excluded.
+    The 58 relevance-flagged two-reviewer agreement cases are
+excluded from the expanded reference but retained for auditing.
     """
 
     expanded_audit = []
@@ -889,25 +890,24 @@ def build_expanded_consensus(audit, reviewer_notes):
         # Expanded reference dataset
         # ----------------------------------------------
 
-        if consensus in CATEGORIES:
+            # Keep all 172 two-reviewer agreements for auditing
+        if consensus_basis == "Two available reviewers agree (2/2)":
+            two_reviewer_cases.append(audit_record)
 
+        # Exclude the 58 relevance-flagged cases from analysis
+        if consensus in CATEGORIES and not (
+            consensus_basis == "Two available reviewers agree (2/2)"
+            and relevance_concern
+        ):
             reference_record = {
                 "review_id": review_id,
                 "consensus_category": consensus,
                 "consensus_basis": consensus_basis,
-                "documented_relevance_concern":
-                    relevance_concern,
-                "language_status":
-                    "Not independently verified",
+                "documented_relevance_concern": relevance_concern,
+                "language_status": "Not independently verified",
             }
 
             expanded_reference.append(reference_record)
-
-            if consensus_basis == (
-                "Two available reviewers agree (2/2)"
-            ):
-
-                two_reviewer_cases.append(audit_record)
 
     return (
         expanded_audit,
@@ -936,8 +936,10 @@ def summarize_expanded_consensus(
             if row["consensus_basis"] == "Majority (2/3)"
         ],
 
-        "Two available reviewers agree (2/2)":
-            two_reviewer_cases,
+        "Two available reviewers agree (2/2)": [
+        row for row in expanded_reference
+        if row["consensus_basis"] == "Two available reviewers agree (2/2)"
+        ],
 
         "Expanded consensus":
             expanded_reference,
@@ -947,11 +949,8 @@ def summarize_expanded_consensus(
 
     for group_name, records in groups.items():
 
-        category_field = (
-            "expanded_consensus_category"
-            if group_name == "Two available reviewers agree (2/2)"
-            else "consensus_category"
-        )
+        category_field = "consensus_category"
+        
 
         summary.append({
             "Group": group_name,
@@ -1142,9 +1141,13 @@ def main():
             f"Expected 172 additional articles, got {additional_count}"
         )
 
-        assert expanded_count == 633, (
-            f"Expected 633 expanded articles, got {expanded_count}"
-        )
+        assert relevance_count == 58, (
+    f"Expected 58 relevance concerns, got {relevance_count}"
+)
+
+        assert expanded_count == 575, (
+    f"Expected 575 expanded articles, got {expanded_count}"
+)
 
         print("\nValidation successful.")
             

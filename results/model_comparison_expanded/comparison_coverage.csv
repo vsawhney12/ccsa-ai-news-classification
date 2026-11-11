@@ -1,7 +1,6 @@
 Reference set,Reference N,Shared N,Excluded predictions,Shared coverage,Excluded review IDs
 Original consensus,461,460,1,0.9978308026030369,587
-Expanded consensus,633,628,5,0.9921011058451816,150; 224; 523; 587; 589
+Expanded consensus,575,574,1,0.9982608695652174,587
 Unanimous (3/3),378,377,1,0.9973544973544973,587
 Majority (2/3),83,83,0,1.0,
-Two available reviewers agree (2/2),172,168,4,0.9767441860465116,150; 224; 523; 589
-Expanded excluding relevance concerns,575,574,1,0.9982608695652174,587
+Two available reviewers agree (2/2),114,114,0,1.0,

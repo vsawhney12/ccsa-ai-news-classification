@@ -1,6 +1,5 @@
 review_id,consensus_category,consensus_basis,documented_relevance_concern,language_status
 1,Public Safety,Unanimous (3/3),False,Not independently verified
-2,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 3,Drug Alert,Unanimous (3/3),False,Not independently verified
 4,Public Safety,Unanimous (3/3),False,Not independently verified
 5,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -11,7 +10,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 10,Public Safety,Unanimous (3/3),False,Not independently verified
 11,Public Safety,Unanimous (3/3),False,Not independently verified
 12,Public Health,Two available reviewers agree (2/2),False,Not independently verified
-13,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 14,Public Safety,Unanimous (3/3),False,Not independently verified
 15,Public Health,Unanimous (3/3),False,Not independently verified
 16,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -32,13 +30,11 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 31,Public Safety,Unanimous (3/3),False,Not independently verified
 32,Drug Alert,Unanimous (3/3),False,Not independently verified
 33,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
-34,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 35,Public Safety,Unanimous (3/3),False,Not independently verified
 36,Public Safety,Unanimous (3/3),False,Not independently verified
 37,Public Safety,Majority (2/3),False,Not independently verified
 38,Public Safety,Majority (2/3),False,Not independently verified
 39,Public Safety,Unanimous (3/3),False,Not independently verified
-40,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 41,Public Safety,Unanimous (3/3),False,Not independently verified
 42,Public Safety,Unanimous (3/3),False,Not independently verified
 43,Public Health,Unanimous (3/3),False,Not independently verified
@@ -65,9 +61,7 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 65,Public Safety,Unanimous (3/3),False,Not independently verified
 66,Public Safety,Unanimous (3/3),False,Not independently verified
 67,Public Safety,Unanimous (3/3),False,Not independently verified
-68,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 69,Public Safety,Unanimous (3/3),False,Not independently verified
-70,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 71,Public Safety,Unanimous (3/3),False,Not independently verified
 72,Public Safety,Unanimous (3/3),False,Not independently verified
 74,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -83,7 +77,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 85,Public Health,Unanimous (3/3),False,Not independently verified
 87,Public Safety,Unanimous (3/3),False,Not independently verified
 88,Drug Alert,Unanimous (3/3),False,Not independently verified
-89,Public Safety,Two available reviewers agree (2/2),True,Not independently verified
 90,Public Health,Unanimous (3/3),False,Not independently verified
 91,Public Safety,Unanimous (3/3),False,Not independently verified
 92,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -98,7 +91,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 101,Public Safety,Unanimous (3/3),False,Not independently verified
 102,Public Safety,Unanimous (3/3),False,Not independently verified
 103,Public Safety,Unanimous (3/3),False,Not independently verified
-104,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 105,Public Safety,Unanimous (3/3),False,Not independently verified
 106,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 107,Public Health,Two available reviewers agree (2/2),False,Not independently verified
@@ -108,12 +100,9 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 111,Public Safety,Unanimous (3/3),False,Not independently verified
 112,Public Safety,Unanimous (3/3),False,Not independently verified
 114,Public Safety,Unanimous (3/3),False,Not independently verified
-115,Public Health,Two available reviewers agree (2/2),True,Not independently verified
-116,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 117,Public Safety,Unanimous (3/3),False,Not independently verified
 118,Public Health,Unanimous (3/3),False,Not independently verified
 119,Public Safety,Unanimous (3/3),False,Not independently verified
-120,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 121,Public Health,Unanimous (3/3),False,Not independently verified
 122,Public Health,Unanimous (3/3),False,Not independently verified
 123,Public Health,Unanimous (3/3),False,Not independently verified
@@ -129,7 +118,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 133,Public Safety,Unanimous (3/3),False,Not independently verified
 134,Public Safety,Unanimous (3/3),False,Not independently verified
 135,Public Safety,Unanimous (3/3),False,Not independently verified
-136,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 137,Public Safety,Unanimous (3/3),False,Not independently verified
 138,Public Safety,Unanimous (3/3),False,Not independently verified
 139,Drug Alert,Majority (2/3),False,Not independently verified
@@ -143,7 +131,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 147,Public Safety,Unanimous (3/3),False,Not independently verified
 148,Public Health,Unanimous (3/3),False,Not independently verified
 149,Public Safety,Unanimous (3/3),False,Not independently verified
-150,Public Safety,Two available reviewers agree (2/2),True,Not independently verified
 151,Public Safety,Unanimous (3/3),False,Not independently verified
 152,Public Safety,Unanimous (3/3),False,Not independently verified
 153,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -164,13 +151,11 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 170,Drug Alert,Unanimous (3/3),False,Not independently verified
 171,Public Health,Majority (2/3),False,Not independently verified
 172,Public Health,Unanimous (3/3),False,Not independently verified
-173,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 174,Public Health,Unanimous (3/3),False,Not independently verified
 175,Public Health,Unanimous (3/3),False,Not independently verified
 176,Public Safety,Unanimous (3/3),False,Not independently verified
 177,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 178,Public Safety,Majority (2/3),False,Not independently verified
-179,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 180,Public Health,Unanimous (3/3),False,Not independently verified
 181,Public Health,Unanimous (3/3),False,Not independently verified
 182,Public Health,Two available reviewers agree (2/2),False,Not independently verified
@@ -183,7 +168,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 190,Public Safety,Unanimous (3/3),False,Not independently verified
 191,Public Safety,Unanimous (3/3),False,Not independently verified
 192,Public Health,Unanimous (3/3),False,Not independently verified
-194,Public Safety,Two available reviewers agree (2/2),True,Not independently verified
 195,Public Health,Unanimous (3/3),False,Not independently verified
 196,Public Safety,Unanimous (3/3),False,Not independently verified
 197,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -191,11 +175,9 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 199,Drug Alert,Majority (2/3),False,Not independently verified
 200,Public Health,Majority (2/3),False,Not independently verified
 201,Drug Alert,Unanimous (3/3),False,Not independently verified
-202,Public Safety,Two available reviewers agree (2/2),True,Not independently verified
 204,Public Health,Unanimous (3/3),False,Not independently verified
 205,Public Safety,Unanimous (3/3),False,Not independently verified
 207,Public Safety,Unanimous (3/3),False,Not independently verified
-208,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 209,Public Health,Unanimous (3/3),False,Not independently verified
 210,Public Safety,Unanimous (3/3),False,Not independently verified
 211,Public Health,Unanimous (3/3),False,Not independently verified
@@ -211,9 +193,7 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 221,Public Safety,Unanimous (3/3),False,Not independently verified
 222,Public Safety,Majority (2/3),False,Not independently verified
 223,Public Safety,Majority (2/3),False,Not independently verified
-224,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 225,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
-226,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 228,Public Health,Two available reviewers agree (2/2),False,Not independently verified
 229,Public Safety,Unanimous (3/3),False,Not independently verified
 230,Public Health,Unanimous (3/3),False,Not independently verified
@@ -222,11 +202,9 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 233,Public Safety,Unanimous (3/3),False,Not independently verified
 234,Public Health,Unanimous (3/3),False,Not independently verified
 235,Public Safety,Unanimous (3/3),False,Not independently verified
-236,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 237,Public Safety,Unanimous (3/3),False,Not independently verified
 238,Public Safety,Unanimous (3/3),False,Not independently verified
 239,Public Safety,Unanimous (3/3),False,Not independently verified
-240,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 241,Public Health,Majority (2/3),False,Not independently verified
 242,Public Safety,Unanimous (3/3),False,Not independently verified
 243,Public Safety,Majority (2/3),False,Not independently verified
@@ -236,7 +214,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 247,Public Safety,Unanimous (3/3),False,Not independently verified
 248,Public Safety,Unanimous (3/3),False,Not independently verified
 249,Public Health,Majority (2/3),False,Not independently verified
-250,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 251,Public Safety,Unanimous (3/3),False,Not independently verified
 252,Public Safety,Unanimous (3/3),False,Not independently verified
 253,Drug Alert,Unanimous (3/3),False,Not independently verified
@@ -245,7 +222,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 256,Public Safety,Unanimous (3/3),False,Not independently verified
 257,Public Health,Unanimous (3/3),False,Not independently verified
 258,Public Health,Unanimous (3/3),False,Not independently verified
-260,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 261,Public Safety,Unanimous (3/3),False,Not independently verified
 262,Public Safety,Unanimous (3/3),False,Not independently verified
 263,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
@@ -261,7 +237,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 274,Public Safety,Unanimous (3/3),False,Not independently verified
 275,Public Safety,Unanimous (3/3),False,Not independently verified
 276,Public Safety,Unanimous (3/3),False,Not independently verified
-277,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 278,Public Safety,Majority (2/3),False,Not independently verified
 279,Public Health,Unanimous (3/3),False,Not independently verified
 280,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -271,9 +246,7 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 284,Drug Alert,Unanimous (3/3),False,Not independently verified
 285,Public Safety,Unanimous (3/3),False,Not independently verified
 286,Public Health,Unanimous (3/3),False,Not independently verified
-287,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 288,Public Health,Unanimous (3/3),False,Not independently verified
-289,Public Safety,Two available reviewers agree (2/2),True,Not independently verified
 290,Public Health,Majority (2/3),False,Not independently verified
 291,Public Safety,Unanimous (3/3),False,Not independently verified
 292,Public Safety,Majority (2/3),False,Not independently verified
@@ -286,7 +259,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 299,Public Safety,Unanimous (3/3),False,Not independently verified
 300,Public Health,Two available reviewers agree (2/2),False,Not independently verified
 301,Public Safety,Unanimous (3/3),False,Not independently verified
-302,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 303,Drug Alert,Unanimous (3/3),False,Not independently verified
 304,Public Safety,Unanimous (3/3),False,Not independently verified
 305,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -295,17 +267,13 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 308,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 309,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 310,Public Safety,Unanimous (3/3),False,Not independently verified
-311,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 312,Drug Alert,Unanimous (3/3),False,Not independently verified
-313,Public Health,Two available reviewers agree (2/2),True,Not independently verified
-314,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 315,Public Health,Unanimous (3/3),False,Not independently verified
 316,Public Health,Majority (2/3),False,Not independently verified
 317,Public Health,Majority (2/3),False,Not independently verified
 318,Public Safety,Unanimous (3/3),False,Not independently verified
 319,Public Safety,Unanimous (3/3),False,Not independently verified
 320,Public Health,Majority (2/3),False,Not independently verified
-321,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 322,Public Health,Unanimous (3/3),False,Not independently verified
 324,Public Safety,Unanimous (3/3),False,Not independently verified
 325,Public Health,Majority (2/3),False,Not independently verified
@@ -323,11 +291,8 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 337,Public Safety,Unanimous (3/3),False,Not independently verified
 338,Public Health,Majority (2/3),False,Not independently verified
 339,Public Safety,Unanimous (3/3),False,Not independently verified
-340,Public Health,Two available reviewers agree (2/2),True,Not independently verified
-341,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 342,Public Health,Two available reviewers agree (2/2),False,Not independently verified
 343,Public Safety,Majority (2/3),False,Not independently verified
-344,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 345,Public Health,Unanimous (3/3),False,Not independently verified
 346,Public Safety,Unanimous (3/3),False,Not independently verified
 347,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -347,19 +312,15 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 362,Public Safety,Unanimous (3/3),False,Not independently verified
 363,Public Safety,Unanimous (3/3),False,Not independently verified
 364,Public Health,Unanimous (3/3),False,Not independently verified
-365,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 366,Public Safety,Unanimous (3/3),False,Not independently verified
 367,Public Safety,Unanimous (3/3),False,Not independently verified
 368,Public Safety,Unanimous (3/3),False,Not independently verified
 369,Public Safety,Unanimous (3/3),False,Not independently verified
-370,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 371,Public Safety,Majority (2/3),False,Not independently verified
-372,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 373,Public Health,Two available reviewers agree (2/2),False,Not independently verified
 374,Public Health,Unanimous (3/3),False,Not independently verified
 375,Public Safety,Unanimous (3/3),False,Not independently verified
 376,Drug Alert,Unanimous (3/3),False,Not independently verified
-377,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 378,Public Health,Unanimous (3/3),False,Not independently verified
 379,Public Safety,Majority (2/3),False,Not independently verified
 380,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -380,7 +341,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 395,Public Safety,Majority (2/3),False,Not independently verified
 396,Public Safety,Unanimous (3/3),False,Not independently verified
 397,Public Health,Unanimous (3/3),False,Not independently verified
-398,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 399,Public Health,Unanimous (3/3),False,Not independently verified
 400,Public Safety,Unanimous (3/3),False,Not independently verified
 402,Public Health,Unanimous (3/3),False,Not independently verified
@@ -407,7 +367,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 423,Public Safety,Unanimous (3/3),False,Not independently verified
 424,Public Safety,Unanimous (3/3),False,Not independently verified
 425,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
-426,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 427,Public Safety,Unanimous (3/3),False,Not independently verified
 428,Public Safety,Unanimous (3/3),False,Not independently verified
 429,Public Health,Unanimous (3/3),False,Not independently verified
@@ -416,29 +375,23 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 432,Public Safety,Unanimous (3/3),False,Not independently verified
 433,Public Health,Unanimous (3/3),False,Not independently verified
 434,Public Safety,Unanimous (3/3),False,Not independently verified
-435,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 436,Public Safety,Unanimous (3/3),False,Not independently verified
-437,Public Health,Two available reviewers agree (2/2),True,Not independently verified
-438,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 439,Public Safety,Unanimous (3/3),False,Not independently verified
 440,Drug Alert,Unanimous (3/3),False,Not independently verified
 441,Public Health,Majority (2/3),False,Not independently verified
 442,Public Safety,Unanimous (3/3),False,Not independently verified
 443,Drug Alert,Unanimous (3/3),False,Not independently verified
-444,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 446,Public Health,Unanimous (3/3),False,Not independently verified
 447,Public Health,Unanimous (3/3),False,Not independently verified
 448,Public Safety,Unanimous (3/3),False,Not independently verified
 449,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 450,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
-451,Public Safety,Two available reviewers agree (2/2),True,Not independently verified
 452,Public Safety,Majority (2/3),False,Not independently verified
 453,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 454,Public Health,Unanimous (3/3),False,Not independently verified
 455,Public Safety,Unanimous (3/3),False,Not independently verified
 456,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 457,Public Health,Majority (2/3),False,Not independently verified
-458,Public Safety,Two available reviewers agree (2/2),True,Not independently verified
 459,Public Safety,Unanimous (3/3),False,Not independently verified
 460,Public Safety,Majority (2/3),False,Not independently verified
 461,Drug Alert,Unanimous (3/3),False,Not independently verified
@@ -474,7 +427,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 493,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 494,Public Safety,Unanimous (3/3),False,Not independently verified
 495,Public Health,Unanimous (3/3),False,Not independently verified
-496,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 497,Public Health,Unanimous (3/3),False,Not independently verified
 498,Public Health,Unanimous (3/3),False,Not independently verified
 499,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
@@ -486,7 +438,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 505,Public Safety,Unanimous (3/3),False,Not independently verified
 506,Public Health,Majority (2/3),False,Not independently verified
 507,Drug Alert,Majority (2/3),False,Not independently verified
-508,Public Safety,Two available reviewers agree (2/2),True,Not independently verified
 509,Public Safety,Unanimous (3/3),False,Not independently verified
 510,Drug Alert,Majority (2/3),False,Not independently verified
 512,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -499,12 +450,10 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 519,Public Safety,Unanimous (3/3),False,Not independently verified
 520,Public Safety,Unanimous (3/3),False,Not independently verified
 521,Public Safety,Majority (2/3),False,Not independently verified
-523,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 524,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 525,Public Safety,Unanimous (3/3),False,Not independently verified
 526,Public Safety,Unanimous (3/3),False,Not independently verified
 527,Public Health,Majority (2/3),False,Not independently verified
-528,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 529,Public Health,Unanimous (3/3),False,Not independently verified
 530,Public Health,Unanimous (3/3),False,Not independently verified
 531,Public Health,Two available reviewers agree (2/2),False,Not independently verified
@@ -518,8 +467,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 539,Public Health,Unanimous (3/3),False,Not independently verified
 540,Public Safety,Unanimous (3/3),False,Not independently verified
 541,Public Health,Unanimous (3/3),False,Not independently verified
-542,Public Health,Two available reviewers agree (2/2),True,Not independently verified
-543,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 544,Public Safety,Unanimous (3/3),False,Not independently verified
 545,Public Safety,Unanimous (3/3),False,Not independently verified
 546,Public Safety,Unanimous (3/3),False,Not independently verified
@@ -528,7 +475,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 549,Public Safety,Majority (2/3),False,Not independently verified
 550,Public Safety,Majority (2/3),False,Not independently verified
 551,Public Safety,Unanimous (3/3),False,Not independently verified
-553,Public Safety,Two available reviewers agree (2/2),True,Not independently verified
 554,Public Safety,Unanimous (3/3),False,Not independently verified
 555,Public Health,Unanimous (3/3),False,Not independently verified
 556,Public Health,Two available reviewers agree (2/2),False,Not independently verified
@@ -540,7 +486,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 562,Public Health,Unanimous (3/3),False,Not independently verified
 563,Public Safety,Majority (2/3),False,Not independently verified
 564,Public Safety,Majority (2/3),False,Not independently verified
-565,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 566,Drug Alert,Two available reviewers agree (2/2),False,Not independently verified
 567,Public Health,Unanimous (3/3),False,Not independently verified
 568,Public Health,Unanimous (3/3),False,Not independently verified
@@ -549,7 +494,6 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 571,Public Safety,Unanimous (3/3),False,Not independently verified
 572,Drug Alert,Unanimous (3/3),False,Not independently verified
 573,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
-574,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 575,Public Safety,Unanimous (3/3),False,Not independently verified
 576,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 577,Drug Alert,Unanimous (3/3),False,Not independently verified
@@ -559,12 +503,10 @@ review_id,consensus_category,consensus_basis,documented_relevance_concern,langua
 581,Public Health,Majority (2/3),False,Not independently verified
 582,Public Safety,Unanimous (3/3),False,Not independently verified
 583,Public Health,Unanimous (3/3),False,Not independently verified
-584,Public Safety,Two available reviewers agree (2/2),True,Not independently verified
 585,Public Health,Unanimous (3/3),False,Not independently verified
 586,Public Health,Majority (2/3),False,Not independently verified
 587,Public Safety,Unanimous (3/3),False,Not independently verified
 588,Public Safety,Unanimous (3/3),False,Not independently verified
-589,Public Health,Two available reviewers agree (2/2),True,Not independently verified
 590,Public Health,Unanimous (3/3),False,Not independently verified
 591,Public Safety,Two available reviewers agree (2/2),False,Not independently verified
 592,Public Health,Two available reviewers agree (2/2),False,Not independently verified

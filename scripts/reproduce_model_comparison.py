@@ -4,23 +4,23 @@ Compare Qwen, Llama, and Mistral against expert consensus.
 This script evaluates:
 
 1. Original consensus (3/3 and 2/3): 461 articles.
-2. Expanded consensus (3/3, 2/3, and 2/2): 633 articles.
+2. Revised expanded consensus (3/3, 2/3, and 2/2): 575 articles.
 3. Individual expert-agreement groups.
-4. Expanded consensus excluding documented relevance concerns.
+
+The revised expanded consensus excludes 58 two-reviewer
+agreement cases with documented relevance concerns.
 
 Statistical analyses:
 - Classification performance
 - Wilson 95% confidence intervals for accuracy
 - Exact McNemar tests for paired model accuracy
+- Holm correction for multiple comparisons
 - Class-specific precision, recall, and F1
 - Pairwise correctness comparisons
-- Relevance sensitivity analysis
 
 All models are evaluated on identical articles within each
 reference set. Articles with invalid predictions from any model
 are excluded from the shared comparison.
-
-Existing model-comparison results are not overwritten.
 
 Required inputs:
 - data/ArticlesV2_Blind_review_qwen.csv
@@ -48,7 +48,7 @@ from sklearn.metrics import (
     matthews_corrcoef,
     precision_recall_fscore_support,
 )
-
+from statsmodels.stats.multitest import multipletests
 
 # ==========================================================
 # SETTINGS
@@ -94,7 +94,6 @@ SUBSETS = (
     "Unanimous (3/3)",
     "Majority (2/3)",
     "Two available reviewers agree (2/2)",
-    "Expanded excluding relevance concerns",
 )
 
 
@@ -322,7 +321,6 @@ def belongs_to_subset(row, subset):
 
     basis = row["consensus_basis"]
 
-    relevance = row["documented_relevance_concern"]
 
     if subset == "Original consensus":
 
@@ -351,18 +349,6 @@ def belongs_to_subset(row, subset):
 
         return basis == TWO_REVIEWER
 
-    if subset == (
-        "Expanded excluding relevance concerns"
-    ):
-
-        return (
-            basis in (
-                UNANIMOUS,
-                MAJORITY,
-                TWO_REVIEWER,
-            )
-            and not relevance
-        )
 
     raise ValueError(
         f"Unknown reference subset: {subset}"
@@ -659,13 +645,6 @@ def build_article_audit(consensus, predictions):
             )
         )
 
-        row["included_relevance_sensitivity"] = (
-            shared_valid
-            and belongs_to_subset(
-                row,
-                "Expanded excluding relevance concerns",
-            )
-        )
 
         for model in MODELS:
 
@@ -829,6 +808,32 @@ def compare_models(audit):
                 **paired,
             })
 
+                    # Holm correction across three model comparisons
+        subset_comparisons = [
+            row for row in pairwise_results
+            if row["Reference set"] == subset
+        ]
+
+        raw_p_values = [
+            row["McNemar exact p-value"]
+            for row in subset_comparisons
+        ]
+
+        rejected, adjusted_p_values, _, _ = multipletests(
+            raw_p_values,
+            alpha=0.05,
+            method="holm",
+        )
+
+        for row, adjusted_p, significant in zip(
+            subset_comparisons,
+            adjusted_p_values,
+            rejected,
+        ):
+            row["Holm-adjusted p-value"] = float(adjusted_p)
+            row["Significant after Holm (0.05)"] = bool(significant)
+
+
     return (
         model_results,
         confidence_results,
@@ -838,57 +843,6 @@ def compare_models(audit):
     )
 
 
-# ==========================================================
-# RELEVANCE SENSITIVITY SUMMARY
-# ==========================================================
-
-def build_relevance_sensitivity(model_results):
-    """
-    Compare performance when relevance-flagged
-    articles are included versus excluded.
-    """
-
-    results = []
-
-    for model in MODELS:
-
-        included = next(
-            row for row in model_results
-            if (
-                row["Reference set"] == "Expanded consensus"
-                and row["Model"] == model
-            )
-        )
-
-        excluded = next(
-            row for row in model_results
-            if (
-                row["Reference set"]
-                == "Expanded excluding relevance concerns"
-                and row["Model"] == model
-            )
-        )
-
-        results.append({
-            "Model": model,
-            "N including concerns": included["N"],
-            "Accuracy including concerns": included["Accuracy"],
-            "Macro F1 including concerns": included["Macro F1"],
-            "N excluding concerns": excluded["N"],
-            "Accuracy excluding concerns": excluded["Accuracy"],
-            "Macro F1 excluding concerns": excluded["Macro F1"],
-            "Accuracy difference": (
-                included["Accuracy"]
-                - excluded["Accuracy"]
-            ),
-            "Macro F1 difference": (
-                included["Macro F1"]
-                - excluded["Macro F1"]
-            ),
-        })
-
-    return results
-
 
 # ==========================================================
 # VALIDATION
@@ -896,10 +850,8 @@ def build_relevance_sensitivity(model_results):
 
 def validate_consensus(consensus):
     """
-    Validate expected reference-set counts.
-
-    These counts correspond to the current
-    999-article expert annotation dataset.
+    Validate the revised consensus dataset after excluding
+    58 relevance-flagged two-reviewer agreement cases.
     """
 
     counts = Counter(
@@ -910,41 +862,35 @@ def validate_consensus(consensus):
     expected = {
         UNANIMOUS: 378,
         MAJORITY: 83,
-        TWO_REVIEWER: 172,
+        TWO_REVIEWER: 114,
     }
 
     for group, expected_count in expected.items():
-
         actual = counts[group]
 
         if actual != expected_count:
-
             raise ValueError(
                 f"{group}: expected {expected_count}, "
                 f"found {actual}."
             )
 
-    if len(consensus) != 633:
-
+    if len(consensus) != 575:
         raise ValueError(
-            f"Expected 633 consensus articles, "
+            f"Expected 575 consensus articles, "
             f"found {len(consensus)}."
         )
 
     relevance_count = sum(
         row["documented_relevance_concern"]
         for row in consensus.values()
-        if row["consensus_basis"] == TWO_REVIEWER
     )
 
-    if relevance_count != 58:
-
+    if relevance_count != 0:
         raise ValueError(
-            f"Expected 58 documented relevance concerns, "
+            f"Expected no relevance-flagged articles, "
             f"found {relevance_count}."
         )
-
-
+    
 def validate_predictions(consensus, predictions):
     """
     Ensure every consensus article has an entry
@@ -1007,7 +953,6 @@ def save_results(
     pairwise_results,
     class_results,
     coverage_results,
-    relevance_results,
     audit,
 ):
     """Save expanded model-comparison outputs."""
@@ -1024,7 +969,6 @@ def save_results(
         "pairwise_correctness.csv": pairwise_results,
         "class_specific_performance.csv": class_results,
         "comparison_coverage.csv": coverage_results,
-        "relevance_sensitivity.csv": relevance_results,
         "comparison_article_level_audit.csv": audit,
     }
 
@@ -1148,15 +1092,7 @@ def main():
             audit
         )
 
-        # --------------------------------------------------
-        # RELEVANCE SENSITIVITY
-        # --------------------------------------------------
-
-        relevance_results = (
-            build_relevance_sensitivity(
-                model_results
-            )
-        )
+        
 
         # --------------------------------------------------
         # SAVE RESULTS
@@ -1169,7 +1105,6 @@ def main():
             pairwise_results,
             class_results,
             coverage_results,
-            relevance_results,
             audit,
         )
 
