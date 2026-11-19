@@ -34,7 +34,7 @@ flowchart TB
 
 ## Data and directory layout
 
-Repository layout (selected files):
+Working research repository layout (selected files; **not a proposed public file manifest**):
 
 ```text
 CCSA Project/
@@ -45,11 +45,11 @@ CCSA Project/
 │   ├── ArticlesV2_Blind_review_mistral.csv
 │   └── Reviewer 1, 2, and 3 annotation workbooks (.xlsx)
 ├── docs/
-│   └── Label_definitions.docx
 ├── scripts/
 │   ├── audit_missingness.py
 │   ├── expert_consensus.py
 │   ├── reproduce_model_comparison.py
+│   ├── drug_alert_analysis.py           # qualitative false-positive audit
 │   ├── reproduce_qwen.py
 │   ├── reproduce_llama.py
 │   ├── reproduce_mistral.py
@@ -58,6 +58,7 @@ CCSA Project/
 │   ├── run_mistral.py
 │   └── test_reliability.py
 ├── results/
+│   ├── drug_alert_error_analysis.csv    # article-level coding, no article text
 │   ├── consensus_results/
 │   ├── model_comparison_results/       # original comparison
 │   ├── model_comparison_expanded/      # revised expanded comparison
@@ -68,7 +69,7 @@ CCSA Project/
 └── README.md
 ```
 
-The `run_*.py` scripts preserve the Ollama inference workflows with project-root-relative paths. The `reproduce_qwen.py`, `reproduce_llama.py`, and `reproduce_mistral.py` scripts produce standalone model evaluations against the original three-reviewer consensus. The `reproduce_model_comparison.py` script performs the shared-sample cross-model comparison. The `docs/` directory contains the classification label definitions.
+The `run_*.py` scripts are the preserved Ollama inference workflows with project-root-relative paths. The `reproduce_*.py` scripts are also present, but are distinct from the inference scripts and the main `reproduce_model_comparison.py` evaluation workflow. Model-specific result directories retain the individual model outputs. The `docs/` directory is retained for project documentation.
 
 Key columns: `review_id` identifies the article across files; `article_text` supplies model input; `reviewed_primary_category` contains expert or model category labels; reviewer workbooks may contain `review_notes`. The consensus script normalizes the observed variants `Public healh` → `Public Health` and `Drug alert` → `Drug Alert`. Blank and `N/A` expert values are **not** valid category labels.
 
@@ -153,7 +154,7 @@ Each article is submitted in a **user-role message**. The prompt defines the thr
 
 **Response parsing:** Each script lowercases the model's returned text and checks for the substrings `drug alert`, then `public safety`, then `public health`, in that priority order. If none appears, it records `Unknown`. This is a heuristic parser: it does **not** validate that the response is exactly one category, and can be influenced by extra text. A successful Ollama call that produces `Unknown` is not retried; exceptions are retried after a five-second wait. The scripts resume from saved output files and skip rows with nonempty classifications. They do not explicitly filter by article language.
 
-**Environment information not recorded in the scripts:** Ollama application version, precise downloaded model digest/build, effective default sampling parameters (including temperature), hardware, and random seed. No inference `options` or explicit random seed are passed to `ollama.chat`. Record these separately for a fully specified reproduction; do not assume the current Ollama defaults match the original environment. Inference outputs should be treated as archived experimental predictions rather than regenerated silently.
+**Archived inference environment:** The original local run was reported to use Ollama **0.40.16** and Python `ollama` package **0.6.2** on an iMac. The recorded model tags and short identifiers were `qwen2.5:7b` (`845dbda0ea48`), `llama3.1:8b` (`46e0c10c039e`), and `mistral:7b` (`6577803aa9a0`). These identifiers and versions were reported from the original setup, rather than independently reverified by this repository audit. The scripts do **not** pass explicit inference `options`, temperature, top-p, top-k, or random seed; their effective default values were not logged and should not be guessed. Inference outputs should therefore be treated as archived experimental predictions rather than silently regenerated.
 
 ### Reproducing model inference (optional)
 
@@ -170,8 +171,6 @@ The Ollama service must be running and the specified model tags available locall
 ## Evaluation design
 
 The updated model-comparison script reads `results/consensus_results/expanded_consensus_reference.csv` rather than independently rebuilding consensus. It compares Qwen, Llama and Mistral on the **same article IDs within each subset**. An article is excluded from the shared evaluation if any model prediction is missing, `Unknown`, `N/A`, or otherwise not one of the three categories; it remains in the expert-consensus reference.
-
-**Standalone versus shared-sample evaluations:** The individual `reproduce_qwen.py`, `reproduce_llama.py`, and `reproduce_mistral.py` scripts each evaluate predictions against the **original 461-article consensus** and exclude invalid predictions for that model alone. Their evaluated sample sizes are therefore **461 for Qwen, 460 for Llama, and 461 for Mistral**. The Llama-only exclusion is Article 587 (`Unknown`). These standalone results, saved in `results/qwen_results/`, `results/llama_results/`, and `results/mistral_results/`, do **not** use an identical evaluation sample across models. In contrast, `reproduce_model_comparison.py` requires valid predictions from **all three models on the same articles**, yielding **460** original-consensus and **574** expanded-consensus shared-evaluable articles. Use the shared-sample results for direct cross-model comparisons.
 
 | Evaluation subset | Reference N | Shared evaluable N |
 |---|---:|---:|
@@ -196,6 +195,56 @@ Earlier exploratory analyses using a broader two-reviewer reference should not b
 | Mistral | 89.1% | 88.3% |
 
 **Quick interpretation:** Qwen had the highest observed accuracy in both samples. However, none of the three model-pair differences in the revised expanded sample was statistically significant after Holm adjustment. These estimates are descriptive; lack of statistical significance does not establish equivalence.
+
+## Prediction coverage and Drug Alert qualitative error audit
+
+Across the 999 articles, the archived model outputs contained the following recognized category predictions and `Unknown` responses:
+
+| Model | Valid category predictions | `Unknown` | `Unknown` in expanded reference |
+|---|---:|---:|---:|
+| Qwen 2.5 7B | 998 | 1 | 0 |
+| Llama 3.1 8B | 994 | 5 | 1 |
+| Mistral 7B | 999 | 0 | 0 |
+
+Four of Llama's five `Unknown` cases were among the 58 two-reviewer agreements excluded after Reviewer 2 flagged relevance concerns. The remaining Llama `Unknown` (article ID **587**) was excluded from both shared-evaluable comparisons. An `Unknown` response means the parsing procedure did not recognize any of the three category names; it does not independently establish why the model produced that response.
+
+The expanded shared-evaluable set contains **574 articles**. Among these, **50 distinct articles** were classified as **Drug Alert** by at least one model but had a reviewer-derived reference label of **Public Health (26)** or **Public Safety (24)**. These are *model–reference disagreements*, not independently verified false alerts. Qwen assigned Drug Alert to **28** such articles, Llama to **14**, and Mistral to **31**; these counts overlap across models.
+
+A descriptive manual review assigned each of the 50 articles one qualitative theme:
+
+| Manually assigned theme | Articles |
+|---|---:|
+| Enforcement, seizure or legal reporting | 23 |
+| Overdose, toxicity or drug-risk reporting | 16 |
+| Unauthorized health-product advisory | 5 |
+| Other or mixed-context reporting | 6 |
+| **Total** | **50** |
+
+The five unauthorized-product advisory cases (IDs **37, 130, 241, 290, 618**) were labeled Drug Alert by all three models. Representative disagreements include a police warning following multiple *suspected* overdose deaths (ID **249**, Public Health reference; Qwen and Mistral predicted Drug Alert) and a fentanyl seizure with charges (ID **36**, unanimous Public Safety reference; Qwen predicted Drug Alert). Qualitative themes are interpretive manual codes, **not** algorithmically inferred categories or independently adjudicated ground truth.
+
+### Reproduce the audit without rerunning models
+
+From the project root:
+
+```bash
+python3 scripts/drug_alert_analysis.py
+```
+
+The script reads the **expanded** article-level comparison at `results/model_comparison_expanded/comparison_article_level_audit.csv`, retains the 574 shared-evaluable records, identifies the 50 distinct Drug Alert false positives, validates model-specific counts and the manually coded article IDs, and writes:
+
+```text
+results/drug_alert_error_analysis.csv
+```
+
+The default CSV contains article IDs, reviewer-derived reference labels, the three model predictions, the models responsible for each Drug Alert false positive, and the assigned descriptive theme. It **does not contain article text**. The theme assignments are explicitly listed in the script by article ID; rerunning the script reproduces the assignments but does not independently validate their interpretation.
+
+For authorized **local-only** review of the actual model input excerpts, run:
+
+```bash
+python3 scripts/drug_alert_analysis.py --include-excerpts
+```
+
+This additionally writes `results/drug_alert_error_analysis_with_excerpts.csv`, containing up to the first 1,200 characters of each source article. The excerpt file is excluded by `.gitignore` and **must not be uploaded or published without CCSA authorization and applicable content rights**. The default article-level CSV also requires a sharing-permission review before the repository is made public; omission of full text does not automatically make article-level annotations redistributable.
 
 ## Dependencies and execution
 
@@ -238,9 +287,12 @@ results/model_comparison_expanded/
     class_specific_performance.csv
     comparison_coverage.csv
     comparison_article_level_audit.csv
+
+results/
+    drug_alert_error_analysis.csv   # from scripts/drug_alert_analysis.py
 ```
 
-The original `results/model_comparison_results/` directory is retained separately and is not overwritten by this workflow. The current script writes into `results/model_comparison_expanded/` and **overwrites files with matching names in that directory**. `paired_model_tests.csv` contains the paired comparisons and multiplicity-adjusted p-values. The expected-output list above excludes the redundant `pairwise_correctness.csv` export that has been removed from the updated script.
+The original `results/model_comparison_results/` directory is retained separately and is not overwritten by this workflow. The current script writes into `results/model_comparison_expanded/` and **overwrites files with matching names in that directory**. Any previous `relevance_sensitivity.csv` should be moved out of this active folder, as the revised script does not regenerate it. `paired_model_tests.csv` contains the paired comparisons and multiplicity-adjusted p-values. Confirm the actual script outputs before listing any additional compatibility exports.
 
 ## Reliability analysis and outstanding validation
 
@@ -263,7 +315,7 @@ python3 scripts/test_reliability.py
 
 These tests support correctness for the tested cases; they do **not** independently reproduce the reported reliability coefficients using the complete reviewer dataset. The Gwet’s AC1 and Krippendorff’s α comparisons use independently coded formulas, not external package implementations. Additional edge-case and full-dataset verification remain possible future checks.
 
-**Still to complete:** capture software/package versions, record Ollama model digests and execution environment, and optionally refactor shared data-loading and evaluation functions.
+**Still to complete:** independently confirm the archived model identifiers and effective generation defaults (which were not explicitly set), capture a complete package lockfile and hardware specification if available, and optionally refactor shared data-loading and evaluation functions.
 
 ## Reporting considerations and limitations
 
@@ -274,9 +326,12 @@ These tests support correctness for the tested cases; they do **not** independen
 - Discuss low Drug Alert support and false-positive Drug Alert predictions; class-wise precision and recall are more informative than accuracy alone.
 - Avoid treating statistical significance on overlapping subsets as independent confirmation. Record the multiplicity correction used in the manuscript.
 - The 1,200-character truncation may remove relevant evidence; no input-length sensitivity experiment was conducted.
+- Do not publish raw copyrighted article text, personal information, or restricted reviewer notes in a public repository without appropriate permission. Provide access-controlled data and document how authorized researchers can obtain the inputs.
 
 ## Code and data availability
 
-This repository contains the **original 999-article input dataset**, three reviewer annotation workbooks, three archived model-prediction CSVs, classification label definitions, inference and analysis scripts, and both article-level and aggregate evaluation results. The intention is to make these materials publicly available to support reproducibility. The analysis can be reproduced from the archived inputs using the documented workflow; rerunning model inference may produce different predictions because the original Ollama version, model digests, and effective sampling defaults were not fully recorded.
+The intended public release covers **analysis code, classification prompts, documentation, and non-restricted aggregate results**, subject to a final repository audit. The new `results/drug_alert_error_analysis.csv` contains article-level model–reviewer comparisons and manual codes; it is **not automatically cleared for public release** simply because article text is omitted. Article text, reviewer workbooks, reviewer notes, and article-level model predictions or audit outputs must **not** be presumed redistributable: the underlying material was provided by CCSA and may also be subject to platform and copyright restrictions. Confirm CCSA authorization and applicable terms before releasing any such files.
 
-**Redistribution permissions:** Before making the repository public, confirm that CCSA authorization and applicable platform, copyright, and privacy requirements permit publication of the article text, reviewer annotations and notes, and derived article-level outputs. The same consideration applies to files retained in Git history. Public accessibility should not be taken as evidence of permission to redistribute third-party material.
+**Publication safety check:** The current working repository has previously tracked reviewer workbooks and model prediction CSVs. Removing files from the latest commit is insufficient if their contents remain accessible in Git history. Audit and, where necessary, rewrite the entire history or create a new clean public repository containing only approved materials **before** changing visibility. This README is not evidence that the repository has been sanitized.
+
+Authorized researchers would need access to the original input data and annotations to reproduce the numerical results; publicly available code alone does not provide a complete end-to-end reproduction. Model reruns may also differ because the original Ollama versions, model digests, and sampling defaults were not fully recorded.
