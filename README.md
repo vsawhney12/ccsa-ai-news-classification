@@ -34,7 +34,7 @@ flowchart TB
 
 ## Data and directory layout
 
-Working research repository layout (selected files; **not a proposed public file manifest**):
+Repository layout (selected files):
 
 ```text
 CCSA Project/
@@ -45,6 +45,7 @@ CCSA Project/
 │   ├── ArticlesV2_Blind_review_mistral.csv
 │   └── Reviewer 1, 2, and 3 annotation workbooks (.xlsx)
 ├── docs/
+│   └── Label_definitions.docx
 ├── scripts/
 │   ├── audit_missingness.py
 │   ├── expert_consensus.py
@@ -67,7 +68,7 @@ CCSA Project/
 └── README.md
 ```
 
-The `run_*.py` scripts are the preserved Ollama inference workflows with project-root-relative paths. The `reproduce_*.py` scripts are also present, but are distinct from the inference scripts and the main `reproduce_model_comparison.py` evaluation workflow. Model-specific result directories retain the individual model outputs. The `docs/` directory is retained for project documentation.
+The `run_*.py` scripts preserve the Ollama inference workflows with project-root-relative paths. The `reproduce_qwen.py`, `reproduce_llama.py`, and `reproduce_mistral.py` scripts produce standalone model evaluations against the original three-reviewer consensus. The `reproduce_model_comparison.py` script performs the shared-sample cross-model comparison. The `docs/` directory contains the classification label definitions.
 
 Key columns: `review_id` identifies the article across files; `article_text` supplies model input; `reviewed_primary_category` contains expert or model category labels; reviewer workbooks may contain `review_notes`. The consensus script normalizes the observed variants `Public healh` → `Public Health` and `Drug alert` → `Drug Alert`. Blank and `N/A` expert values are **not** valid category labels.
 
@@ -170,6 +171,8 @@ The Ollama service must be running and the specified model tags available locall
 
 The updated model-comparison script reads `results/consensus_results/expanded_consensus_reference.csv` rather than independently rebuilding consensus. It compares Qwen, Llama and Mistral on the **same article IDs within each subset**. An article is excluded from the shared evaluation if any model prediction is missing, `Unknown`, `N/A`, or otherwise not one of the three categories; it remains in the expert-consensus reference.
 
+**Standalone versus shared-sample evaluations:** The individual `reproduce_qwen.py`, `reproduce_llama.py`, and `reproduce_mistral.py` scripts each evaluate predictions against the **original 461-article consensus** and exclude invalid predictions for that model alone. Their evaluated sample sizes are therefore **461 for Qwen, 460 for Llama, and 461 for Mistral**. The Llama-only exclusion is Article 587 (`Unknown`). These standalone results, saved in `results/qwen_results/`, `results/llama_results/`, and `results/mistral_results/`, do **not** use an identical evaluation sample across models. In contrast, `reproduce_model_comparison.py` requires valid predictions from **all three models on the same articles**, yielding **460** original-consensus and **574** expanded-consensus shared-evaluable articles. Use the shared-sample results for direct cross-model comparisons.
+
 | Evaluation subset | Reference N | Shared evaluable N |
 |---|---:|---:|
 | Original consensus | 461 | 460 |
@@ -237,7 +240,7 @@ results/model_comparison_expanded/
     comparison_article_level_audit.csv
 ```
 
-The original `results/model_comparison_results/` directory is retained separately and is not overwritten by this workflow. The current script writes into `results/model_comparison_expanded/` and **overwrites files with matching names in that directory**. Any previous `relevance_sensitivity.csv` should be moved out of this active folder, as the revised script does not regenerate it. `paired_model_tests.csv` contains the paired comparisons and multiplicity-adjusted p-values. Confirm the actual script outputs before listing any additional compatibility exports.
+The original `results/model_comparison_results/` directory is retained separately and is not overwritten by this workflow. The current script writes into `results/model_comparison_expanded/` and **overwrites files with matching names in that directory**. `paired_model_tests.csv` contains the paired comparisons and multiplicity-adjusted p-values. The expected-output list above excludes the redundant `pairwise_correctness.csv` export that has been removed from the updated script.
 
 ## Reliability analysis and outstanding validation
 
@@ -271,12 +274,9 @@ These tests support correctness for the tested cases; they do **not** independen
 - Discuss low Drug Alert support and false-positive Drug Alert predictions; class-wise precision and recall are more informative than accuracy alone.
 - Avoid treating statistical significance on overlapping subsets as independent confirmation. Record the multiplicity correction used in the manuscript.
 - The 1,200-character truncation may remove relevant evidence; no input-length sensitivity experiment was conducted.
-- Do not publish raw copyrighted article text, personal information, or restricted reviewer notes in a public repository without appropriate permission. Provide access-controlled data and document how authorized researchers can obtain the inputs.
 
 ## Code and data availability
 
-The intended public release covers **analysis code, classification prompts, documentation, and non-restricted aggregate results**, subject to a final repository audit. Article text, reviewer workbooks, reviewer notes, and article-level model predictions or audit outputs must **not** be presumed redistributable: the underlying material was provided by CCSA and may also be subject to platform and copyright restrictions. Confirm CCSA authorization and applicable terms before releasing any such files.
+This repository contains the **original 999-article input dataset**, three reviewer annotation workbooks, three archived model-prediction CSVs, classification label definitions, inference and analysis scripts, and both article-level and aggregate evaluation results. The intention is to make these materials publicly available to support reproducibility. The analysis can be reproduced from the archived inputs using the documented workflow; rerunning model inference may produce different predictions because the original Ollama version, model digests, and effective sampling defaults were not fully recorded.
 
-**Publication safety check:** The current working repository has previously tracked reviewer workbooks and model prediction CSVs. Removing files from the latest commit is insufficient if their contents remain accessible in Git history. Audit and, where necessary, rewrite the entire history or create a new clean public repository containing only approved materials **before** changing visibility. This README is not evidence that the repository has been sanitized.
-
-Authorized researchers would need access to the original input data and annotations to reproduce the numerical results; publicly available code alone does not provide a complete end-to-end reproduction. Model reruns may also differ because the original Ollama versions, model digests, and sampling defaults were not fully recorded.
+**Redistribution permissions:** Before making the repository public, confirm that CCSA authorization and applicable platform, copyright, and privacy requirements permit publication of the article text, reviewer annotations and notes, and derived article-level outputs. The same consideration applies to files retained in Git history. Public accessibility should not be taken as evidence of permission to redistribute third-party material.

@@ -966,7 +966,6 @@ def save_results(
         "model_comparison.csv": model_results,
         "model_confidence_intervals.csv": confidence_results,
         "paired_model_tests.csv": pairwise_results,
-        "pairwise_correctness.csv": pairwise_results,
         "class_specific_performance.csv": class_results,
         "comparison_coverage.csv": coverage_results,
         "comparison_article_level_audit.csv": audit,
