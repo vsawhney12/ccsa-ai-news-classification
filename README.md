@@ -34,7 +34,7 @@ flowchart TB
 
 ## Data and directory layout
 
-Current repository layout (selected files):
+Working research repository layout (selected files; **not a proposed public file manifest**):
 
 ```text
 CCSA Project/
@@ -71,26 +71,6 @@ The `run_*.py` scripts are the preserved Ollama inference workflows with project
 
 Key columns: `review_id` identifies the article across files; `article_text` supplies model input; `reviewed_primary_category` contains expert or model category labels; reviewer workbooks may contain `review_notes`. The consensus script normalizes the observed variants `Public healh` → `Public Health` and `Drug alert` → `Drug Alert`. Blank and `N/A` expert values are **not** valid category labels.
 
-## Preliminary learning-curve analysis and annotation planning
-
-Before expert review, an exploratory learning-curve experiment was conducted to help set a **pragmatic annotation target of approximately 600 articles per reviewer**. This was a planning exercise, not a validation of the eventual expert-consensus sample size.
-
-The exploratory experiment used a separate `learning_curve_logreg.py` script (not shown in the current repository tree) to fit a **TF-IDF + logistic regression** classifier to articles with **Qwen-generated category labels** as the target. It did **not** use expert-validated labels. The TF-IDF vectorizer used up to 10,000 features, unigram/bigram features (`ngram_range=(1, 2)`), and English stop-word removal. Logistic regression used `class_weight="balanced"` and `max_iter=1000`. For each training size from 100 to 900 in increments of 100, the code performed **20 stratified random train/test splits** (seeds 0–19), refitting the entire pipeline each time. The test set was the remainder of the available articles, so **test-set size decreased as training size increased**. The script reports mean and sample standard deviation (SD) for accuracy, macro F1, weighted F1, and Matthews correlation coefficient (MCC).
-
-| Training articles | Test articles | Accuracy (mean) | Macro F1 (mean) | MCC (mean) |
-|---|---:|---:|---:|---:|
-| 500 | 498 | 0.885 | 0.844 | 0.796 |
-| 600 | 398 | 0.890 | 0.854 | 0.804 |
-| 700 | 298 | 0.895 | 0.862 | 0.814 |
-| 800 | 198 | 0.895 | 0.860 | 0.814 |
-| 900 | 98 | 0.908 | 0.877 | 0.834 |
-
-The relatively small gains between **600 and 800 training articles** were used in the exploratory annotation-planning exercise. Performance increased again at 900, however, and the smallest test sets had greater variability. **The experiment does not establish 600 as a statistically optimal sample size**, demonstrate sufficient expert agreement, or show that the eventual evaluation is free from missing-annotation bias. Those issues are addressed separately through the consensus and missingness audits.
-
-The learning-curve script and its generated figure are **not shown in the current repository structure**. To reproduce this exploratory analysis, restore the original script and its inputs before running it; the primary consensus and model-comparison workflow does not depend on it.
-
-The prior exploratory outputs included `learning_curve_repeated_results.csv` and `learning_curve.png`; these are historical analysis artifacts and are not part of the current repository tree shown above. The figure visualized accuracy and MCC, while the CSV contained all four metrics. Reproducing the experiment requires 180 fits.
-
 ## Expert annotation and consensus
 
 ### How the expert reference was built
@@ -100,7 +80,7 @@ flowchart TB
     A["999 articles reviewed"]
     A --> B["461 original consensus<br/>378 unanimous + 83 majority"]
     A --> C["172 matching two-reviewer labels"]
-    A --> D["366 without qualifying agreement"]
+    A --> D["366 with fewer than two agreeing valid labels"]
     C --> E["58 excluded<br/>Documented relevance concerns"]
     C --> F["114 retained"]
     B --> G["Revised expanded reference<br/>575 articles"]
@@ -115,7 +95,7 @@ flowchart TB
     class D,E excluded;
 ```
 
-The 58 excluded two-reviewer agreements remain in the audit files; they are **not** part of the final 575-article reference. The 366 other articles had no qualifying agreement under the original consensus rules.
+The 58 excluded two-reviewer agreements remain in the audit files; they are **not** part of the final 575-article reference. The other 366 articles comprise 21 conflicting two-reviewer labels, 43 single-reviewer labels, and 302 articles without a valid label.
 
 
 All three reviewer files cover the same 999 IDs, but not every reviewer supplied a category for every article. A blank cell does not have a single universal interpretation: possible reasons include an incomplete review, a language-related omission, a relevance concern, or an unexplained omission. Explicit `N/A` is also treated as non-category information rather than as a fourth class.
@@ -130,9 +110,19 @@ All three reviewer files cover the same 999 IDs, but not every reviewer supplied
 | Available-reviewer agreement (2/2), retained | Identified 2/2 agreements minus 58 flagged cases | 114 |
 | **Revised expanded consensus** | Original plus 114 retained 2/2 agreements | **575** |
 
-Outside the original 633 potentially consensus-labeled articles, 21 have two valid but conflicting labels, 43 have only one valid label, and 302 have none. Together with the 58 relevance-flagged 2/2 agreements excluded from the revised reference, these account for the 424 articles not in the final 575-article reference.
+Of the 999 articles, 461 had three valid reviewer labels, 193 had exactly two (172 agreeing and 21 conflicting), 43 had one, and 302 had none. The 424 articles outside the expanded 575 comprise 58 flagged but agreeing two-reviewer cases, 21 conflicting two-reviewer cases, 43 single-label cases, and 302 unlabeled cases.
 
-The 172 additional 2/2 cases were audited for missingness: **58** have documented relevance concerns from the missing reviewer; **54** were flagged as likely French-language omissions using automated language identification (not independently confirmed); **57** are beyond a reviewer's observed annotation range (an inference from coverage); and **3** have unexplained blank annotations. These are descriptive missingness categories, not validated eligibility determinations. Following supervisory agreement, the 58 relevance-flagged 2/2 cases are **excluded** from the revised expanded reference but remain in the 172-case audit. The four audit categories are mutually exclusive under the script’s precedence rule: documented relevance concern, likely French, outside observed annotation range, then unexplained. Language is not used as an automatic exclusion rule.
+The 172 agreeing two-reviewer cases were examined individually to characterize the missing third label:
+
+| Audit group | Reviewer-specific observation | Articles | Expanded reference |
+|---|---|---:|---|
+| Documented relevance concerns | Reviewers **1 and 3** agreed; Reviewer **2** did not supply a category and instead recorded a relevance concern in review notes | **58** | Excluded |
+| French-language articles | Reviewers **2 and 3**, both of whom understood French, agreed; Reviewer **1** did not annotate these articles because they did not understand French | **54** | Retained |
+| Outside observed Reviewer 2 annotation coverage | Reviewers **1 and 3** agreed; Reviewer **2** supplied no category, and these article IDs were above **599**, the last ID annotated by Reviewer 2 | **57** | Retained |
+| Unexplained missing labels | Reviewers **2 and 3** agreed; Reviewer **1** supplied no category or documented explanation (IDs **99, 231, 484**) | **3** | Retained |
+| **Total** | | **172** | **114 retained** |
+
+The 58 exclusions reflect **Reviewer 2's recorded concerns**, not independently verified out-of-domain determinations or formal three-reviewer adjudication. For the 57 coverage cases, article ID range describes the observed pattern but does not establish why Reviewer 2 did not annotate them. The three unexplained cases remain unresolved. The 54 French-language articles were classified by all three models **in their original French text without translation**; the audit does not establish French-subset model performance beyond the available reviewer-label comparisons. Language itself was not an exclusion criterion. The 114 retained articles were added on the basis of two agreeing valid reviewer labels, subject to the stated exclusion of the 58 relevance-flagged cases.
 
 **Interpretation:** The expanded reference is an *available-reviewer consensus*, not a fully adjudicated gold standard. Two agreeing reviewers do not resolve a third reviewer's concerns about relevance. The 21 conflicting 2/2 cases remain excluded from accuracy calculations; this is a possible source of selection bias.
 
@@ -144,7 +134,7 @@ The updated `expert_consensus.py` saves original reviewer coverage, label availa
 - `expanded_consensus_summary.csv` — revised reference-group and class counts.
 - `two_reviewer_missingness_audit.csv` and `two_reviewer_missingness_summary.csv` — outputs from `scripts/audit_missingness.py`, preserving all 172 identified 2/2 agreements and their missingness classifications.
 
-The missingness audit uses reviewer notes, reviewer ID coverage, and automated language detection on the first 3,000 characters of article text. A French-language flag requires a `langdetect` probability of at least 0.90. These are evidence-based audit categories, not independently confirmed reasons for each missing label.
+The missingness audit script uses reviewer notes, observed reviewer-ID coverage, and automated language detection on the first 3,000 characters of article text (`langdetect` French probability threshold: 0.90). **These script-based flags should not be mistaken for the full reviewer-specific explanation above:** the French non-annotation reason was subsequently clarified, while the 57 coverage-related and three unexplained omissions have not been independently resolved. The script should be checked against the reviewer-specific audit before its categories are presented as verified causes.
 
 ## Models and inference
 
@@ -155,6 +145,8 @@ The three supplied inference scripts use the **Ollama** Python client (`ollama.c
 | Qwen | `qwen2.5:7b` | First 1,200 characters | Every 25 processed rows |
 | Llama | `llama3.1:8b` | First 1,200 characters | Every 25 processed rows |
 | Mistral | `mistral:7b` | First 1,200 characters | Every 25 processed rows |
+
+The first **1,200 characters** were used to limit computational time for locally run inference across 999 articles. This was a pragmatic constraint, **not** an empirically optimized input length. The median source article length was **2,812 characters**, and **844/999 (84.5%)** articles exceeded 1,200 characters; consequently, potentially relevant information later in articles may have been omitted. Input-length sensitivity was not tested.
 
 Each article is submitted in a **user-role message**. The prompt defines the three categories with examples, directs the model to output exactly one label, gives **Drug Alert** priority, directs policing/crime-focused articles to **Public Safety**, and otherwise defaults to **Public Health**. Secondary topics are ignored. The full prompt is preserved in the inference scripts and should be retained verbatim for reproducibility.
 
@@ -186,11 +178,11 @@ The updated model-comparison script reads `results/consensus_results/expanded_co
 | Majority (2/3) | 83 | 83 |
 | Two available reviewers agree (2/2), retained | 114 | 114 |
 
-One original-consensus article (ID **587**) is not evaluable across all three models, leaving 460 original and 574 revised expanded articles in the shared evaluation. The 58 excluded relevance-flagged 2/2 cases are not part of the revised reference. The shared-sample rule ensures like-for-like comparisons, but may itself exclude challenging cases.
+One original-consensus article (ID **587**) has an invalid **Llama** classification (`Unknown`) and is not evaluable across all three models, leaving 460 original and 574 revised expanded articles in the shared evaluation. The 58 excluded relevance-flagged 2/2 cases are not part of the revised reference. The shared-sample rule ensures like-for-like comparisons, but may itself exclude challenging cases.
 
 The script reports accuracy, macro precision/recall/F1, weighted F1, Cohen's kappa, and Matthews correlation coefficient. It also reports category-specific precision, recall, F1 and support, including the minority Drug Alert class. Accuracy uncertainty is estimated with **95% Wilson score confidence intervals**. Pairwise accuracy is assessed using **exact two-sided McNemar tests** on the same articles. The script exports both **unadjusted and Holm-adjusted p-values**, correcting the three model-pair comparisons separately within each reference subset. No model-pair difference was significant at 0.05 after Holm correction in the revised expanded subset. Interpret the primary reference set as predeclared where applicable; analyses of overlapping subsets should be described as exploratory, not as independent replications.
 
-The earlier 633-article expanded analysis (628 evaluable) can be retained as a **historical comparison**, but is no longer generated by the current script. Its 58 flagged 2/2 cases included four without valid shared predictions, so excluding them removed 54 evaluable articles. This exclusion reflects documented concerns, not independently established irrelevance. Any historical `relevance_sensitivity.csv` should be archived separately and not presented as a current output.
+Earlier exploratory analyses using a broader two-reviewer reference should not be presented as the final evaluation. The final expanded reference excludes the 58 reviewer-flagged cases; this exclusion does not independently establish that those articles were irrelevant. Archive historical sensitivity outputs separately from the current results.
 
 ### Model accuracy at a glance
 
@@ -207,10 +199,10 @@ The earlier 633-article expanded analysis (628 evaluable) can be retained as a *
 Python 3 with these packages is required for the documented scripts:
 
 ```bash
-python3 -m pip install pandas numpy matplotlib openpyxl scikit-learn scipy ollama statsmodels langdetect
+python3 -m pip install pandas numpy openpyxl scikit-learn scipy ollama statsmodels langdetect
 ```
 
-`pandas` and `ollama` are used for inference; `numpy` and `matplotlib` are used for the learning-curve experiment and figure; `openpyxl` and `scikit-learn` for the consensus and comparison workflows; `scipy` for the exact McNemar p-values; `statsmodels` for Holm correction and independent Fleiss' kappa validation in the unit tests; and `langdetect` for the missingness audit. Standard-library dependencies do not require installation. The package versions used originally were not recorded in the supplied scripts; for a future rerun, capture a lockfile or `pip freeze` and the Python version.
+`pandas` and `ollama` are used for inference; `numpy`, `openpyxl` and `scikit-learn` support the consensus and comparison workflows; `scipy` for the exact McNemar p-values; `statsmodels` for Holm correction and independent Fleiss' kappa validation in the unit tests; and `langdetect` for the missingness audit. Standard-library dependencies do not require installation. The package versions used originally were not recorded in the supplied scripts; for a future rerun, capture a lockfile or `pip freeze` and the Python version.
 
 From the project root, run the updated scripts in this order:
 
@@ -240,13 +232,12 @@ results/model_comparison_expanded/
     model_comparison.csv
     model_confidence_intervals.csv
     paired_model_tests.csv
-    pairwise_correctness.csv
     class_specific_performance.csv
     comparison_coverage.csv
     comparison_article_level_audit.csv
 ```
 
-The original `results/model_comparison_results/` directory is retained separately and is not overwritten by this workflow. The current script writes into `results/model_comparison_expanded/` and **overwrites files with matching names in that directory**. Any previous `relevance_sensitivity.csv` should be moved out of this active folder, as the revised script does not regenerate it. `paired_model_tests.csv` and `pairwise_correctness.csv` are duplicate exports retained for compatibility; **both include Holm-adjusted p-values**.
+The original `results/model_comparison_results/` directory is retained separately and is not overwritten by this workflow. The current script writes into `results/model_comparison_expanded/` and **overwrites files with matching names in that directory**. Any previous `relevance_sensitivity.csv` should be moved out of this active folder, as the revised script does not regenerate it. `paired_model_tests.csv` contains the paired comparisons and multiplicity-adjusted p-values. Confirm the actual script outputs before listing any additional compatibility exports.
 
 ## Reliability analysis and outstanding validation
 
@@ -275,8 +266,17 @@ These tests support correctness for the tested cases; they do **not** independen
 
 - Distinguish **999 source articles**, **575 revised consensus-labeled articles**, and **574 shared evaluable predictions**.
 - Explicitly separate 3/3, 2/3 and 2/2 agreement. A 2/2 agreement is not a third-reviewer endorsement.
-- Report the 58 documented relevance concerns, their exclusion from the revised reference, and the retained 172-case missingness audit. The reason for three other blanks remains unexplained, and automated French-language detection is provisional.
+- Report the 58 documented relevance concerns, their exclusion from the revised reference, and the retained 172-case missingness audit. The reason for three other blanks remains unexplained, and the reviewer-specific reasons and remaining uncertainties described above.
 - Note that the 21 two-reviewer disagreements lack consensus and are excluded; a change in accuracy after adding only agreeing cases does not eliminate selection-bias concerns.
 - Discuss low Drug Alert support and false-positive Drug Alert predictions; class-wise precision and recall are more informative than accuracy alone.
 - Avoid treating statistical significance on overlapping subsets as independent confirmation. Record the multiplicity correction used in the manuscript.
-- Do not publish raw copyrighted article text, personal information, or restricted reviewer notes in a public repository without appropriate permission. Provide de-identified or access-controlled data and document how authorized researchers can obtain the inputs.
+- The 1,200-character truncation may remove relevant evidence; no input-length sensitivity experiment was conducted.
+- Do not publish raw copyrighted article text, personal information, or restricted reviewer notes in a public repository without appropriate permission. Provide access-controlled data and document how authorized researchers can obtain the inputs.
+
+## Code and data availability
+
+The intended public release covers **analysis code, classification prompts, documentation, and non-restricted aggregate results**, subject to a final repository audit. Article text, reviewer workbooks, reviewer notes, and article-level model predictions or audit outputs must **not** be presumed redistributable: the underlying material was provided by CCSA and may also be subject to platform and copyright restrictions. Confirm CCSA authorization and applicable terms before releasing any such files.
+
+**Publication safety check:** The current working repository has previously tracked reviewer workbooks and model prediction CSVs. Removing files from the latest commit is insufficient if their contents remain accessible in Git history. Audit and, where necessary, rewrite the entire history or create a new clean public repository containing only approved materials **before** changing visibility. This README is not evidence that the repository has been sanitized.
+
+Authorized researchers would need access to the original input data and annotations to reproduce the numerical results; publicly available code alone does not provide a complete end-to-end reproduction. Model reruns may also differ because the original Ollama versions, model digests, and sampling defaults were not fully recorded.
